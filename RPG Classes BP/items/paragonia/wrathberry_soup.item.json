@@ -1,0 +1,32 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:item": {
+    "description": {
+      "identifier": "paragonia_classes:wrathberry_soup",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:tags": {
+        "tags": [
+          "paragonia_classes:barbarian"
+        ]
+      },
+      "minecraft:food": {
+        "can_always_eat": true,
+        "nutrition": 4,
+        "saturation_modifier": 0.1,
+        "using_converts_to": "bowl"
+      },
+      "minecraft:use_modifiers": {
+        "movement_modifier": 0.75,
+        "use_duration": 1
+      },
+      "minecraft:use_animation": "drink",
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:icon": "paragonia_classes_wrathberry_soup",
+      "minecraft:max_stack_size": 16
+    }
+  }
+}

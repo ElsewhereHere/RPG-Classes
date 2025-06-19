@@ -1,0 +1,24 @@
+{
+  "materials": {
+    "version": "1.0.0",
+
+  "paragonia_classes_emissive_blend_cull:entity_alphablend": {
+      "+defines": ["USE_EMISSIVE"],
+      "+states": ["Blending"]
+    },
+
+	"paragonia_classes_emissive_blend:entity_alphablend": {
+      "+defines": ["USE_EMISSIVE"],
+      "+states": ["Blending","DisableCulling"]
+    },
+    
+  "paragonia_classes_emissive_blend_additive:entity_alphablend": {
+      "+defines": ["USE_EMISSIVE"],
+      "+states": ["Blending","DisableCulling"],
+
+      "blendSrc":  "SourceAlpha",
+      "blendDst":  "One"
+    }
+
+  }
+}

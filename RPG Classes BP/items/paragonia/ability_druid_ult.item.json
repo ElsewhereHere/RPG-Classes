@@ -1,0 +1,36 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:item": {
+    "description": {
+      "identifier": "paragonia_classes:ability_druid_ult",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:food": {
+        "nutrition": 0,
+        "can_always_eat": true
+      },
+      "minecraft:use_modifiers": {
+        "use_duration": 340282346638528859811704183484516925440,
+        "movement_modifier": 1.0
+      },
+      //"minecraft:custom_components": ["paragonia_classes:ability"],
+      "minecraft:tags": {
+        "tags": [
+          "paragonia_classes:ability",
+          "paragonia_classes:druid",
+          "paragonia_classes:arm_visible"
+        ]
+      },
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:icon": "paragonia_classes_ability_druid_ult",
+      "minecraft:cooldown": {
+        "category": "ability_druid_ult",
+        "duration": 30
+      },
+      "minecraft:max_stack_size": 1
+    }
+  }
+}

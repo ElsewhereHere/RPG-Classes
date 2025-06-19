@@ -1,0 +1,173 @@
+##
+## Misinformation
+## Copyright 2025 Paragonia, LLC
+##
+
+pack.name=RPG Classes Add-On
+pack.description=Choose from 10 RPG Classes, from Wizards to Rogues!
+
+
+tile.paragonia_classes:shrine_class.name=Class Shrine
+
+item.paragonia_classes:recipe_book=RPG Classes Recipe Book
+
+item.spawn_egg.entity.paragonia_classes:target_dummy.name=Target Dummy
+tile.paragonia_classes:target_dummy.name=Target Dummy
+item.spawn_egg.entity.paragonia_classes:target_dummy_display.name=Target Dummy Display
+tile.paragonia_classes:target_dummy_display.name=Target Dummy Display
+
+
+## Barbarian
+item.paragonia_classes:axe=Axe
+item.paragonia_classes:battle_axe=Battle Axe
+
+item.paragonia_classes:barbarian_helmet=Barbarian Helmet
+item.paragonia_classes:barbarian_vest=Barbarian Vest
+item.paragonia_classes:barbarian_shorts=Barbarian Shorts
+item.paragonia_classes:barbarian_shoes=Barbarian Shoes
+
+item.paragonia_classes:ability_barbarian_1=§cBattle Cry
+item.paragonia_classes:ability_barbarian_2=§cReckless Leap
+item.paragonia_classes:ability_barbarian_3=§cFrenzy
+item.paragonia_classes:ability_barbarian_ult=§cRage
+
+item.paragonia_classes:utility_barbarian_1=§cVent Steam
+item.paragonia_classes:utility_barbarian_2=§cBrute Force
+
+item.paragonia_classes:wrathberry_soup=Wrathberry Soup
+item.paragonia_classes:rock=Rock
+
+
+## Paladin
+item.paragonia_classes:flail=Flail
+item.paragonia_classes:mace=Mace
+
+item.paragonia_classes:paladin_helm=Paladin Helm
+item.paragonia_classes:paladin_cuirass=Paladin Cuirass
+item.paragonia_classes:paladin_faulds=Paladin Faulds
+item.paragonia_classes:paladin_sabatons=Paladin Sabatons
+
+item.paragonia_classes:ability_paladin_1=§eRadiant Shield
+item.paragonia_classes:ability_paladin_2=§eRestoring Light
+item.paragonia_classes:ability_paladin_3=§eSacred Flame
+item.paragonia_classes:ability_paladin_ult=§eDivine Ascension
+
+item.paragonia_classes:utility_paladin_1=§eCleanse
+item.paragonia_classes:utility_paladin_2=§ePurify
+
+item.paragonia_classes:radiant_orb=Radiant Orb
+item.spawn_egg.entity.paragonia_classes:target_dummy_undead.name=Undead Target Dummy
+
+
+## Druid
+item.paragonia_classes:wand=Wand
+item.paragonia_classes:staff=Staff
+
+item.paragonia_classes:druid_hood=Druid Hood
+item.paragonia_classes:druid_shirt=Druid Shirt
+item.paragonia_classes:druid_skirt=Druid Skirt
+item.paragonia_classes:druid_shoes=Druid Shoes
+
+item.paragonia_classes:ability_druid_1=§aEntangle
+item.paragonia_classes:ability_druid_2=§aBarkskin
+item.paragonia_classes:ability_druid_3=§aSoothing Spores
+item.paragonia_classes:ability_druid_ult=§aForest Guardian
+
+item.paragonia_classes:utility_druid_1=§aDruidcraft
+item.paragonia_classes:utility_druid_2=§aSpeak With Animals
+
+item.paragonia_classes:barkskin_head=Barkskin
+item.paragonia_classes:barkskin_torso=Barkskin
+item.paragonia_classes:barkskin_legs=Barkskin
+item.paragonia_classes:barkskin_feet=Barkskin
+
+
+## Ranger
+item.paragonia_classes:ranger_cowl=Ranger Cowl
+item.paragonia_classes:ranger_jerkin=Ranger Jerkin
+item.paragonia_classes:ranger_leggings=Ranger Leggings
+item.paragonia_classes:ranger_boots=Ranger Boots
+
+item.paragonia_classes:ability_ranger_1=§qSnipe
+item.paragonia_classes:ability_ranger_2=§qBarrage
+item.paragonia_classes:ability_ranger_3=§qEvasive Maneuver
+item.paragonia_classes:ability_ranger_ult=§qRapid Fire
+
+item.paragonia_classes:utility_ranger_1=§qTracker
+item.paragonia_classes:utility_ranger_2=§qRanger Utility 2
+
+
+## Martialist
+item.paragonia_classes:glove=Glove
+
+item.paragonia_classes:martialist_headband=Martialist Headband
+item.paragonia_classes:martialist_wraps=Martialist Wraps
+item.paragonia_classes:martialist_trousers=Martialist Trousers
+item.paragonia_classes:martialist_footwraps=Martialist Footwraps
+
+item.paragonia_classes:ability_bard_1=§sFlurry of Blows
+item.paragonia_classes:ability_bard_2=§sFocused Stance
+item.paragonia_classes:ability_bard_3=§sDeflect Missiles
+item.paragonia_classes:ability_bard_ult=§sUnwind Time
+
+item.paragonia_classes:utility_bard_1=§sMeditate
+item.paragonia_classes:utility_bard_2=§sWall Run
+
+
+## Wizard
+item.paragonia_classes:scroll=Scroll
+item.paragonia_classes:tome=Tome
+
+item.paragonia_classes:wizard_hat=Wizard Hat
+item.paragonia_classes:wizard_robe=Wizard Robe
+item.paragonia_classes:wizard_skirt=Wizard Skirt
+item.paragonia_classes:wizard_sandals=Wizard Sandals
+
+item.paragonia_classes:ability_wizard_1=§9Arcane Overcharge
+item.paragonia_classes:ability_wizard_2=§9Chain Reaction
+item.paragonia_classes:ability_wizard_3=§9Ability 3
+item.paragonia_classes:ability_wizard_ult=§9Slow Time
+
+item.paragonia_classes:utility_wizard_1=§9Blink
+item.paragonia_classes:utility_wizard_2=§9Recall Rune
+
+
+
+## Bard
+item.paragonia_classes:flute=Flute
+item.paragonia_classes:lute=Lute
+
+item.paragonia_classes:bard_hat=Bard Hat
+item.paragonia_classes:bard_doublet=Bard Doublet
+item.paragonia_classes:bard_tights=Bard Tights
+item.paragonia_classes:bard_shoes=Bard Shoes
+
+item.paragonia_classes:ability_bard_1=§dConfusion
+item.paragonia_classes:ability_bard_2=§dCharismatic Clone
+item.paragonia_classes:ability_bard_3=§dBard Ability 3
+item.paragonia_classes:ability_bard_ult=§dBard Ultimate
+
+item.paragonia_classes:utility_bard_1=§dViscous Mockery
+item.paragonia_classes:utility_bard_2=§dBardic Inspiration
+
+
+## Rogue
+item.paragonia_classes:dagger=Dagger
+item.paragonia_classes:throwing_knife=Throwing Knife
+
+item.paragonia_classes:rogue_hood=Rogue Hood
+item.paragonia_classes:rogue_shirt=Rogue Shirt
+item.paragonia_classes:rogue_pants=Rogue Pants
+item.paragonia_classes:rogue_shoes=Rogue Shoes
+
+item.paragonia_classes:ability_rogue_1=§8Lacerate
+item.paragonia_classes:ability_rogue_2=§8Execute
+item.paragonia_classes:ability_rogue_3=§8Shadow Cloak
+item.paragonia_classes:ability_rogue_ult=§8Ambush
+
+item.paragonia_classes:utility_rogue_1=§8Pickpocket
+item.paragonia_classes:utility_rogue_2=§8Double Jump
+
+
+## Shrine
+text.shrine.show_class_hub=`\nGreetings, ${currentClassName}.\nWhat would you like to do?\n\n================================`

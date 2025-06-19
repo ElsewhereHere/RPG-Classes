@@ -1,0 +1,183 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "paragonia_classes:projectile_rock",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "component_groups": {
+      "paragonia:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+
+      "paragonia:despawn_pickup": {
+        "minecraft:instant_despawn": {},
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "should_leash": false,
+              "single_use": false,
+              "spawn_item": "paragonia_classes:rock"
+            }
+          ]
+        }
+      },
+
+      "paragonia:timedown": {
+        "minecraft:timer": {
+          "time": 60,
+          "looping": false,
+          "time_down_event": {
+            "event": "paragonia:expire",
+            "target": "self"
+          }
+        }
+      },
+
+      "paragonia:projectile": {
+        "minecraft:collision_box": {
+          "width": 0.5,
+          "height": 0.5
+        },
+        "minecraft:projectile": {
+          "on_hit": {
+            "impact_damage": {
+              "damage": 1,
+              "knockback": false,
+              "semi_random_diff_damage": false
+            }
+          },
+          "power": 2,
+          "gravity": 0.05,
+          "inertia": 0.99,
+          "liquid_inertia": 0.65,
+          "uncertainty_base": 0,
+          "uncertainty_multiplier": 0,
+          "anchor": 1,
+          "reflect_on_hurt": true,
+          "catch_fire": false,
+          "should_bounce": true
+        },
+        "minecraft:break_blocks": {
+          "breakable_blocks": [
+            "minecraft:glass",
+            "minecraft:glass_pane",
+            "minecraft:red_stained_glass",
+            "minecraft:red_stained_glass_pane",
+            "minecraft:orange_stained_glass",
+            "minecraft:orange_stained_glass_pane",
+            "minecraft:yellow_stained_glass",
+            "minecraft:yellow_stained_glass_pane",
+            "minecraft:lime_stained_glass",
+            "minecraft:lime_stained_glass_pane",
+            "minecraft:green_stained_glass",
+            "minecraft:green_stained_glass_pane",
+            "minecraft:cyan_stained_glass",
+            "minecraft:cyan_stained_glass_pane",
+            "minecraft:light_blue_stained_glass",
+            "minecraft:light_blue_stained_glass_pane",
+            "minecraft:blue_stained_glass",
+            "minecraft:blue_stained_glass_pane",
+            "minecraft:purple_stained_glass",
+            "minecraft:purple_stained_glass_pane",
+            "minecraft:magenta_stained_glass",
+            "minecraft:magenta_stained_glass_pane",
+            "minecraft:pink_stained_glass",
+            "minecraft:pink_stained_glass_pane",
+            "minecraft:brown_stained_glass",
+            "minecraft:brown_stained_glass_pane",
+            "minecraft:black_stained_glass",
+            "minecraft:black_stained_glass_pane",
+            "minecraft:gray_stained_glass",
+            "minecraft:gray_stained_glass_pane",
+            "minecraft:light_gray_stained_glass",
+            "minecraft:light_gray_stained_glass_pane",
+            "minecraft:white_stained_glass",
+            "minecraft:white_stained_glass_pane"
+          ]
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.3,
+        "height": 0.2
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": "no"
+          }
+        ]
+      },
+
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "event": "paragonia:pickup"
+            },
+            "hurt_item": 0,
+            "swing": true
+          }
+        ]
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "event": "paragonia:on_ground",
+            "target": "self",
+            "filters": {
+              "test": "on_ground",
+              "value": true
+            }
+          }
+        ]
+      },
+      "minecraft:physics": {},
+      "minecraft:dimension_bound": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 80.0,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": true
+        }
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["paragonia:timedown", "paragonia:projectile"]
+        }
+      },
+      "paragonia:expire": {
+        "add": {
+          "component_groups": ["paragonia:despawn"]
+        }
+      },
+      "paragonia:pickup": {
+        "add": {
+          "component_groups": ["paragonia:despawn_pickup"]
+        }
+      },
+      "paragonia:on_ground": {
+        "remove": {
+          "component_groups": ["paragonia:projectile"]
+        }
+      }
+    }
+  }
+}

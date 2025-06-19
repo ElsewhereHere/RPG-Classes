@@ -1,0 +1,153 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "paragonia_classes:target_dummy",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "paragonia_classes:just_hit": {
+          "type": "bool",
+          "default": false,
+          "client_sync": true
+        }
+      }
+    },
+    "component_groups": {
+      //Despawn Component Group
+      "paragonia:instant_despawn": {
+        "minecraft:instant_despawn": {},
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "max_wait_time": 0,
+              "min_wait_time": 0,
+              "num_to_spawn": 1,
+              "should_leash": false,
+              "single_use": false,
+              "spawn_item": "paragonia_classes:target_dummy_spawn_egg"
+            }
+          ]
+        }
+      },
+
+      //Despawn Timer Component Group
+      "paragonia:just_hit_timer": {
+        "minecraft:timer": {
+          "time": 0.15,
+          "looping": false,
+          "time_down_event": {
+            "event": "paragonia:reset_just_hit",
+            "target": "self"
+          }
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:type_family": {
+        "family": ["paragonia_classes:target_dummy"]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "self",
+                    "value": "paragonia_classes:target_dummy"
+                  }
+                ]
+              },
+              "event": "paragonia:just_hit"
+            },
+            "deals_damage": "yes"
+          }
+        ]
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_sneaking",
+                    "subject": "other"
+                  }
+                ]
+              },
+              "event": "paragonia:despawn"
+            },
+            "swing": true
+          }
+        ]
+      },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "width": 0.8,
+            "height": 2,
+            "pivot": [0, 1, 0]
+          }
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.8,
+        "height": 2
+      },
+      "minecraft:persistent": {},
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:nameable": {
+        "always_show": false,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true,
+        "push_towards_closest_space": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 100
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:health": {
+        "max": 100,
+        "min": 0
+      }
+    },
+
+    "events": {
+      //Spawn Event
+      "minecraft:entity_spawned": {
+        "set_property": { "paragonia_classes:just_hit": false }
+      },
+      //Despawn Event
+      "paragonia:despawn": {
+        "add": { "component_groups": ["paragonia:instant_despawn"] }
+      },
+      //Despawn Timer Event
+      "paragonia:despawn_timer": {
+        "add": { "component_groups": ["paragonia:despawn_timer"] },
+        "set_property": { "entangle:is_grabbing": false }
+      },
+      //Just Hit Event
+      "paragonia:just_hit": {
+        "add": { "component_groups": ["paragonia:just_hit_timer"] },
+        "set_property": { "paragonia_classes:just_hit": true }
+      },
+      //Reset Just Hit Event
+      "paragonia:reset_just_hit": {
+        "remove": { "component_groups": ["paragonia:just_hit_timer"] },
+        "set_property": { "paragonia_classes:just_hit": false }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "format_version": "1.19.80",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "paragonia_classes:ability_barbarian_1",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/paragonia/classes/attachables/empty"
+      },
+      "geometry": {
+        "default": "geometry.paragonia_classes.empty"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

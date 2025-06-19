@@ -1,0 +1,12 @@
+{
+  "resource_pack_name": "pack.name",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+
+    "paragonia_classes_null": {"textures": "textures/paragonia/classes/blocks/null"},
+    "paragonia_classes_shrine_class": {"textures": "textures/paragonia/classes/blocks/shrine_class"}
+  
+  }
+}

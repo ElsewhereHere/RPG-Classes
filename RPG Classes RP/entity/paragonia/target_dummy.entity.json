@@ -1,0 +1,33 @@
+{
+  "format_version": "1.21.70",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "paragonia_classes:target_dummy",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/paragonia/classes/entity/target_dummy"
+      },
+      "geometry": {
+        "default": "geometry.paragonia_classes.target_dummy"
+      },
+      "sound_effects": {
+        "hit": "paragonia_classes.target_dummy_hit"
+      },
+      "animations": {
+        "controller": "controller.animation.paragonia_classes.target_dummy",
+        "hit1": "animation.paragonia_classes.target_dummy.hit1",
+        "hit2": "animation.paragonia_classes.target_dummy.hit2",
+        "hit3": "animation.paragonia_classes.target_dummy.hit3"
+      },
+      "scripts": {
+        "animate": ["controller"]
+      },
+      "render_controllers": ["controller.render.paragonia_classes.target_dummy"],
+      "spawn_egg": {
+        "texture": "paragonia_classes_spawn_target_dummy"
+      }
+    }
+  }
+}

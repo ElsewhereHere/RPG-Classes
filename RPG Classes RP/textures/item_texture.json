@@ -1,0 +1,164 @@
+{
+  "resource_pack_name": "pack.name",
+  "texture_name": "atlas.items",
+  "texture_data": {
+
+    "paragonia_classes_spawn_shrine_class": {"textures": "textures/paragonia/classes/items/spawn_shrine_class"},
+    "paragonia_classes_spawn_target_dummy": {"textures": "textures/paragonia/classes/items/spawn_target_dummy"},
+
+    "paragonia_classes_recipe_book": {"textures": "textures/paragonia/classes/items/recipe_book"},
+
+
+//Barbarian
+    "paragonia_classes_axe": {"textures": "textures/paragonia/classes/items/axe"},
+    "paragonia_classes_battle_axe": {"textures": "textures/paragonia/classes/items/battle_axe"},
+
+    "paragonia_classes_barbarian_helmet": {"textures": "textures/paragonia/classes/items/barbarian_helmet"},
+    "paragonia_classes_barbarian_vest": {"textures": "textures/paragonia/classes/items/barbarian_vest"},
+    "paragonia_classes_barbarian_shorts": {"textures": "textures/paragonia/classes/items/barbarian_shorts"},
+    "paragonia_classes_barbarian_shoes": {"textures": "textures/paragonia/classes/items/barbarian_shoes"},
+
+    "paragonia_classes_ability_barbarian_1": {"textures": "textures/paragonia/classes/items/ability_barbarian_1"},
+    "paragonia_classes_ability_barbarian_2": {"textures": "textures/paragonia/classes/items/ability_barbarian_2"},
+    "paragonia_classes_ability_barbarian_3": {"textures": "textures/paragonia/classes/items/ability_barbarian_3"},
+    "paragonia_classes_ability_barbarian_ult": {"textures": "textures/paragonia/classes/items/ability_barbarian_ult"},
+    "paragonia_classes_ability_barbarian_ult_dyed": {"textures": "textures/paragonia/classes/items/ability_barbarian_ult_dyed"},
+
+    "paragonia_classes_utility_barbarian_1": {"textures": "textures/paragonia/classes/items/utility_barbarian_1"},
+    "paragonia_classes_utility_barbarian_2": {"textures": "textures/paragonia/classes/items/utility_barbarian_2"},
+
+    "paragonia_classes_wrathberry_soup": {"textures": "textures/paragonia/classes/items/wrathberry_soup"},
+    "paragonia_classes_rock": {"textures": "textures/paragonia/classes/items/rock"},
+
+
+//Paladin
+    "paragonia_classes_flail": {"textures": "textures/paragonia/classes/items/flail"},
+
+    "paragonia_classes_paladin_helm": {"textures": "textures/paragonia/classes/items/paladin_helm"},
+    "paragonia_classes_paladin_cuirass": {"textures": "textures/paragonia/classes/items/paladin_cuirass"},
+    "paragonia_classes_paladin_faulds": {"textures": "textures/paragonia/classes/items/paladin_faulds"},
+    "paragonia_classes_paladin_sabatons": {"textures": "textures/paragonia/classes/items/paladin_sabatons"},
+
+    "paragonia_classes_ability_paladin_1": {"textures": "textures/paragonia/classes/items/ability_paladin_1"},
+    "paragonia_classes_ability_paladin_2": {"textures": "textures/paragonia/classes/items/ability_paladin_2"},
+    "paragonia_classes_ability_paladin_3": {"textures": "textures/paragonia/classes/items/ability_paladin_3"},
+    "paragonia_classes_ability_paladin_ult": {"textures": "textures/paragonia/classes/items/ability_paladin_ult"},
+    "paragonia_classes_ability_paladin_ult_dyed": {"textures": "textures/paragonia/classes/items/ability_paladin_ult_dyed"},
+
+    "paragonia_classes_utility_paladin_1": {"textures": "textures/paragonia/classes/items/utility_paladin_1"},
+    "paragonia_classes_utility_paladin_2": {"textures": "textures/paragonia/classes/items/utility_paladin_2"},
+
+    "paragonia_classes_radiant_orb": {"textures": "textures/paragonia/classes/items/radiant_orb"},
+    "paragonia_classes_spawn_target_dummy_undead": {"textures": "textures/paragonia/classes/items/spawn_target_dummy_undead"},
+
+
+//Druid
+    "paragonia_classes_wand": {"textures": "textures/paragonia/classes/items/wand"},
+    "paragonia_classes_staff": {"textures": "textures/paragonia/classes/items/staff"},
+
+    "paragonia_classes_druid_hood": {"textures": "textures/paragonia/classes/items/druid_hood"},
+    "paragonia_classes_druid_shirt": {"textures": "textures/paragonia/classes/items/druid_shirt"},
+    "paragonia_classes_druid_skirt": {"textures": "textures/paragonia/classes/items/druid_skirt"},
+    "paragonia_classes_druid_shoes": {"textures": "textures/paragonia/classes/items/druid_shoes"},
+
+    "paragonia_classes_ability_druid_1": {"textures": "textures/paragonia/classes/items/ability_druid_1"},
+    "paragonia_classes_ability_druid_2": {"textures": "textures/paragonia/classes/items/ability_druid_2"},
+    "paragonia_classes_ability_druid_3": {"textures": "textures/paragonia/classes/items/ability_druid_3"},
+    "paragonia_classes_ability_druid_ult": {"textures": "textures/paragonia/classes/items/ability_druid_ult"},
+
+    "paragonia_classes_utility_druid_1": {"textures": "textures/paragonia/classes/items/utility_druid_1"},
+    "paragonia_classes_utility_druid_2": {"textures": "textures/paragonia/classes/items/utility_druid_2"},
+
+    "paragonia_classes_barkskin_head": {"textures": "textures/paragonia/classes/items/barkskin_head"},
+    "paragonia_classes_barkskin_torso": {"textures": "textures/paragonia/classes/items/barkskin_torso"},
+    "paragonia_classes_barkskin_legs": {"textures": "textures/paragonia/classes/items/barkskin_legs"},
+    "paragonia_classes_barkskin_feet": {"textures": "textures/paragonia/classes/items/barkskin_feet"},
+
+
+//Ranger
+    "paragonia_classes_ranger_cowl": {"textures": "textures/paragonia/classes/items/ranger_cowl"},
+    "paragonia_classes_ranger_jerkin": {"textures": "textures/paragonia/classes/items/ranger_jerkin"},
+    "paragonia_classes_ranger_leggings": {"textures": "textures/paragonia/classes/items/ranger_leggings"},
+    "paragonia_classes_ranger_boots": {"textures": "textures/paragonia/classes/items/ranger_boots"},
+
+    "paragonia_classes_ability_ranger_1": {"textures": "textures/paragonia/classes/items/ability_ranger_1"},
+    "paragonia_classes_ability_ranger_2": {"textures": "textures/paragonia/classes/items/ability_ranger_2"},
+    "paragonia_classes_ability_ranger_3": {"textures": "textures/paragonia/classes/items/ability_ranger_3"},
+    "paragonia_classes_ability_ranger_ult": {"textures": "textures/paragonia/classes/items/ability_ranger_ult"},
+
+    "paragonia_classes_utility_ranger_1": {"textures": "textures/paragonia/classes/items/utility_ranger_1"},
+    "paragonia_classes_utility_ranger_2": {"textures": "textures/paragonia/classes/items/utility_ranger_2"},
+    
+
+//Martialist
+    "paragonia_classes_glove": {"textures": "textures/paragonia/classes/items/glove"},
+
+    "paragonia_classes_martialist_headband": {"textures": "textures/paragonia/classes/items/martialist_headband"},
+    "paragonia_classes_martialist_wraps": {"textures": "textures/paragonia/classes/items/martialist_wraps"},
+    "paragonia_classes_martialist_trousers": {"textures": "textures/paragonia/classes/items/martialist_trousers"},
+    "paragonia_classes_martialist_footwraps": {"textures": "textures/paragonia/classes/items/martialist_footwraps"},
+
+    "paragonia_classes_ability_martialist_1": {"textures": "textures/paragonia/classes/items/ability_martialist_1"},
+    "paragonia_classes_ability_martialist_2": {"textures": "textures/paragonia/classes/items/ability_martialist_2"},
+    "paragonia_classes_ability_martialist_3": {"textures": "textures/paragonia/classes/items/ability_martialist_3"},
+    "paragonia_classes_ability_martialist_ult": {"textures": "textures/paragonia/classes/items/ability_martialist_ult"},
+
+    "paragonia_classes_utility_martialist_1": {"textures": "textures/paragonia/classes/items/utility_martialist_1"},
+    "paragonia_classes_utility_martialist_2": {"textures": "textures/paragonia/classes/items/utility_martialist_2"},
+
+
+//Wizard
+    "paragonia_classes_scroll": {"textures": "textures/paragonia/classes/items/scroll"},
+    "paragonia_classes_tome": {"textures": "textures/paragonia/classes/items/tome"},
+
+    "paragonia_classes_wizard_hat": {"textures": "textures/paragonia/classes/items/wizard_hat"},
+    "paragonia_classes_wizard_robe": {"textures": "textures/paragonia/classes/items/wizard_robe"},
+    "paragonia_classes_wizard_skirt": {"textures": "textures/paragonia/classes/items/wizard_skirt"},
+    "paragonia_classes_wizard_sandals": {"textures": "textures/paragonia/classes/items/wizard_sandals"},
+
+    "paragonia_classes_ability_wizard_1": {"textures": "textures/paragonia/classes/items/ability_wizard_1"},
+    "paragonia_classes_ability_wizard_2": {"textures": "textures/paragonia/classes/items/ability_wizard_2"},
+    "paragonia_classes_ability_wizard_3": {"textures": "textures/paragonia/classes/items/ability_wizard_3"},
+    "paragonia_classes_ability_wizard_ult": {"textures": "textures/paragonia/classes/items/ability_wizard_ult"},
+
+    "paragonia_classes_utility_wizard_1": {"textures": "textures/paragonia/classes/items/utility_wizard_1"},
+    "paragonia_classes_utility_wizard_2": {"textures": "textures/paragonia/classes/items/utility_wizard_2"},
+
+
+//Bard
+    "paragonia_classes_flute": {"textures": "textures/paragonia/classes/items/flute"},
+    "paragonia_classes_lute": {"textures": "textures/paragonia/classes/items/lute"},
+
+    "paragonia_classes_bard_hat": {"textures": "textures/paragonia/classes/items/bard_hat"},
+    "paragonia_classes_bard_doublet": {"textures": "textures/paragonia/classes/items/bard_doublet"},
+    "paragonia_classes_bard_tights": {"textures": "textures/paragonia/classes/items/bard_tights"},
+    "paragonia_classes_bard_shoes": {"textures": "textures/paragonia/classes/items/bard_shoes"},
+
+    "paragonia_classes_ability_bard_1": {"textures": "textures/paragonia/classes/items/ability_bard_1"},
+    "paragonia_classes_ability_bard_2": {"textures": "textures/paragonia/classes/items/ability_bard_2"},
+    "paragonia_classes_ability_bard_3": {"textures": "textures/paragonia/classes/items/ability_bard_3"},
+    "paragonia_classes_ability_bard_ult": {"textures": "textures/paragonia/classes/items/ability_bard_ult"},
+
+    "paragonia_classes_utility_bard_1": {"textures": "textures/paragonia/classes/items/utility_bard_1"},
+    "paragonia_classes_utility_bard_2": {"textures": "textures/paragonia/classes/items/utility_bard_2"},
+
+
+//Rogue
+    "paragonia_classes_dagger": {"textures": "textures/paragonia/classes/items/dagger"},
+    "paragonia_classes_throwing_knife": {"textures": "textures/paragonia/classes/items/throwing_knife"},
+
+    "paragonia_classes_rogue_hood": {"textures": "textures/paragonia/classes/items/rogue_hood"},
+    "paragonia_classes_rogue_shirt": {"textures": "textures/paragonia/classes/items/rogue_shirt"},
+    "paragonia_classes_rogue_pants": {"textures": "textures/paragonia/classes/items/rogue_pants"},
+    "paragonia_classes_rogue_shoes": {"textures": "textures/paragonia/classes/items/rogue_shoes"},
+
+    "paragonia_classes_ability_rogue_1": {"textures": "textures/paragonia/classes/items/ability_rogue_1"},
+    "paragonia_classes_ability_rogue_2": {"textures": "textures/paragonia/classes/items/ability_rogue_2"},
+    "paragonia_classes_ability_rogue_3": {"textures": "textures/paragonia/classes/items/ability_rogue_3"},
+    "paragonia_classes_ability_rogue_ult": {"textures": "textures/paragonia/classes/items/ability_rogue_ult"},
+
+    "paragonia_classes_utility_rogue_1": {"textures": "textures/paragonia/classes/items/utility_rogue_1"},
+    "paragonia_classes_utility_rogue_2": {"textures": "textures/paragonia/classes/items/utility_rogue_2"}
+
+  }
+}

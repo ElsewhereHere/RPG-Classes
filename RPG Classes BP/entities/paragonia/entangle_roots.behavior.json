@@ -1,0 +1,113 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "paragonia_classes:entangle_roots",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "paragonia:biome_variant": {
+          "type": "int",
+          "default": 0,
+          "range": [0, 8],
+          "client_sync": true
+        },
+        "entangle:is_grabbing": {
+          "type": "bool",
+          "default": true,
+          "client_sync": true
+        }
+      }
+    },
+    "component_groups": {
+      //Despawn Component Group
+      "paragonia:instant_despawn": { "minecraft:instant_despawn": {} },
+      //Grabbing Component Group
+      "entangle:grabbing": {
+        "minecraft:timer": {
+          "time": 2,
+          "looping": true,
+          "time_down_event": {
+            "event": "paragonia:despawn_timer",
+            "target": "self"
+          }
+        }
+      },
+      //Despawn Timer Component Group
+      "paragonia:despawn_timer": {
+        "minecraft:timer": {
+          "time": 1,
+          "looping": true,
+          "time_down_event": {
+            "event": "paragonia:despawn",
+            "target": "self"
+          }
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": "no"
+        }
+      },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "width": 1,
+            "height": 0.2,
+            "pivot": [0, 0.1, 0]
+          }
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.01,
+        "height": 0.01
+      },
+      "minecraft:persistent": {},
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:nameable": {
+        "always_show": false,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false,
+        "push_towards_closest_space": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:health": {
+        "value": 1,
+        "max": 1,
+        "min": 1
+      }
+    },
+
+    "events": {
+      //Despawn Event
+      "paragonia:despawn": {
+        "add": { "component_groups": ["paragonia:instant_despawn"] }
+      },
+      //Despawn Timer Event
+      "paragonia:despawn_timer": {
+        "add": { "component_groups": ["paragonia:despawn_timer"] },
+        "set_property": { "entangle:is_grabbing": false }
+      },
+      //On Entity Spawn Event
+      "minecraft:entity_spawned": {
+        "add": { "component_groups": ["entangle:grabbing"] },
+        "set_property": { "entangle:is_grabbing": true }
+      }
+    }
+  }
+}

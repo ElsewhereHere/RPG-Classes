@@ -1,0 +1,30 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "paragonia_classes:battle_axe"
+    },
+    "unlock": [
+      {
+        "item": "paragonia_classes:recipe_book",
+        "data": 1
+      }
+    ],
+    "tags": ["crafting_table"],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "/": {
+        "item": "minecraft:stick"
+      }
+    },
+    "pattern": [
+      " I/", 
+      " /I",
+      "/  "],
+    "result": {
+      "item": "paragonia_classes:battle_axe"
+    }
+  }
+}

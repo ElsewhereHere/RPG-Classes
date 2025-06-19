@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "paragonia_classes:radiant_shield",
+      "materials": {
+        "default": "paragonia_classes_emissive_blend",
+        "outline": "paragonia_classes_emissive_blend_additive"
+      },
+      "textures": {
+        "default": "textures/paragonia/classes/entity/radiant_shield"
+      },
+      "geometry": {
+        "default": "geometry.paragonia_classes.radiant_shield"
+      },
+      "animations": {
+        "idle": "animation.paragonia_classes.ability.radiant_shield",
+        "hit": "animation.paragonia_classes.ability.radiant_shield_pulse"
+      },
+      "scripts": {
+        "animate": ["idle"]
+      },
+      "render_controllers": ["controller.render.paragonia_classes.ability"]
+    }
+  }
+}

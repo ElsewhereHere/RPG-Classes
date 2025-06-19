@@ -1,0 +1,33 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "paragonia_classes:target_dummy"
+    },
+    "unlock": [
+      {
+        "item": "paragonia_classes:recipe_book",
+        "data": 1
+      }
+    ],
+    "tags": ["crafting_table"],
+    "key": {
+      "T": {
+        "item": "minecraft:target"
+      },
+      "H": {
+        "item": "minecraft:hay_block"
+      },
+      "/": {
+        "item": "minecraft:stick"
+      }
+    },
+    "pattern": [
+      " H ", 
+      "/T/",
+      " / "],
+    "result": {
+      "item": "paragonia_classes:target_dummy_spawn_egg"
+    }
+  }
+}

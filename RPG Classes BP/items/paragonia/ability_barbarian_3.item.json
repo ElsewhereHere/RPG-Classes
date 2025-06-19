@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:item": {
+    "description": {
+      "identifier": "paragonia_classes:ability_barbarian_3",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:tags": {
+        "tags": [
+          "paragonia_classes:ability",
+          "paragonia_classes:barbarian",
+          "paragonia_classes:arm_visible"
+        ]
+      },
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:icon": "paragonia_classes_ability_barbarian_3",
+      "minecraft:cooldown": {
+        "category": "paragonia_classes:ability_barbarian_3",
+        "duration": 20
+      },
+      "minecraft:max_stack_size": 1
+    }
+  }
+}

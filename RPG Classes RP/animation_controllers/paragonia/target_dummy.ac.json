@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.paragonia_classes.target_dummy": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            { "hit1": "q.property('paragonia_classes:just_hit') == true && math.random(0, 1) < 0.33" },
+            { "hit2": "q.property('paragonia_classes:just_hit') == true && math.random(0, 1) < 0.66" },
+            { "hit3": "q.property('paragonia_classes:just_hit') == true" }
+          ],
+          "blend_transition": 0.05
+        },
+        "hit1": {
+          "animations": ["hit1"],
+          "transitions": [{ "default": "q.any_animation_finished" }],
+          "blend_transition": 0.05
+        },
+        "hit2": {
+          "animations": ["hit2"],
+          "transitions": [{ "default": "q.any_animation_finished" }],
+          "blend_transition": 0.05
+        },
+        "hit3": {
+          "animations": ["hit3"],
+          "transitions": [{ "default": "q.any_animation_finished" }],
+          "blend_transition": 0.05
+        }
+      }
+    }
+  }
+}

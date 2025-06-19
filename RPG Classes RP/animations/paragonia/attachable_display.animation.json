@@ -1,0 +1,57 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.attachable_display.hold_first_person": {
+			"loop": true,
+			"bones": {
+				"item": {
+					"rotation": [90, -60, -230],
+					"position": [-3, 16, 2],
+					"scale": 1
+				},
+				"item_offhand": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.attachable_display.hold_third_person": {
+			"loop": true,
+			"bones": {
+				"item": {
+					"rotation": [90, 0, -180],
+					"position": [-6, 14, -2],
+					"scale": 0.75
+				},
+				"item_offhand": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.attachable_display.hold_first_person_offhand": {
+			"loop": true,
+			"bones": {
+				"item": {
+					"scale": 0
+				},
+				"item_offhand": {
+					"rotation": [-6, 0, 0],
+					"position": [-12.44413, 13.80047, 19.82405],
+					"scale": 500
+				}
+			}
+		},
+		"animation.attachable_display.hold_third_person_offhand": {
+			"loop": true,
+			"bones": {
+				"item": {
+					"scale": 0
+				},
+				"item_offhand": {
+					"rotation": [90, 0, -180],
+					"position": [6, 14, -2],
+					"scale": 500
+				}
+			}
+		}
+	}
+}

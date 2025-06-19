@@ -1,0 +1,41 @@
+{
+  "format_version": "1.21.70",
+  "minecraft:item": {
+    "description": {
+      "identifier": "paragonia_classes:ability_paladin_ult",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:durability": {
+        "damage_chance": {
+          "min": 0,
+          "max": 0
+        },
+        "max_durability": 100
+      },
+      "minecraft:dyeable": {
+        "default_color": "#FFFFFF"
+      },
+      "minecraft:tags": {
+        "tags": [
+          "paragonia_classes:ability",
+          "paragonia_classes:paladin",
+          "paragonia_classes:arm_visible"
+        ]
+      },
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:icon": {
+        "textures": {
+          "default": "paragonia_classes_ability_paladin_ult"
+        }
+      },
+      "minecraft:cooldown": {
+        "category": "paragonia_classes:ability_paladin_ult",
+        "duration": 1
+      },
+      "minecraft:max_stack_size": 1
+    }
+  }
+}

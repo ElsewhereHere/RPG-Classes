@@ -1,0 +1,17 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.paragonia_classes.ability": {
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" }, { "outline_*": "Material.outline" } ],
+      "textures": [ "Texture.default" ],
+      "ignore_lighting": true,
+      "is_hurt_color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      }
+    }
+  }
+}

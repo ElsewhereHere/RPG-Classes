@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.70",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "paragonia_classes:target_dummy_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/paragonia/classes/entity/null"
+      },
+      "geometry": {
+        "default": "geometry.paragonia_classes.target_dummy_display"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "format_version": 2,
+  "metadata": {
+    "authors": ["Paragonia"],
+    "product_type": "addon"
+  },
+  "header": {
+    "name": "pack.name",
+    "description": "pack.description",
+    "uuid": "9a23e3f5-870b-4c59-a9ce-935dfde1f041",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 90]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "0ab065e1-55e8-42cf-b1df-f3e0e81e8651",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "6fa947ae-d05e-45b4-ba43-e21b07241049",
+      "version": [1, 0, 0]
+    }
+  ]
+}

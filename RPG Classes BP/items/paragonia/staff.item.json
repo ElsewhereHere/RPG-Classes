@@ -1,0 +1,40 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:item": {
+    "description": {
+      "identifier": "paragonia_classes:staff",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      //"minecraft:custom_components": ["paragonia_classes:staff"],
+      "minecraft:tags": {
+        "tags": [
+          "paragonia_classes:druid", 
+          "paragonia_classes:arm_visible"
+        ]
+      },
+      "minecraft:durability": {
+        "damage_chance": {
+          "min": 50,
+          "max": 100
+        },
+        "max_durability": 256
+      },
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:icon": "paragonia_classes_staff",
+      "minecraft:max_stack_size": 1,
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": [
+              "minecraft:stick"
+            ],
+            "repair_amount": 32
+          }
+        ]
+      }
+    }
+  }
+}

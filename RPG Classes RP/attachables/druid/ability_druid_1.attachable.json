@@ -1,0 +1,31 @@
+{
+  "format_version": "1.19.80",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "paragonia_classes:ability_druid_1",
+      "materials": {
+        "default": "slime"
+      },
+      "textures": {
+        "default": "textures/paragonia/classes/attachables/ability_druid_1"
+      },
+      "geometry": {
+        "default": "geometry.paragonia_classes.ability_druid_1"
+      },
+      "animations": {
+        "controller": "controller.animation.paragonia_classes.abilities",
+        "hold_first_person": "animation.attachable_display.hold_first_person",
+        "hold_third_person": "animation.attachable_display.hold_third_person",
+        "idle": "animation.ability.druid_1_idle"
+      },
+      "scripts": {
+        "animate": [
+          "controller",
+          { "hold_first_person": "context.is_first_person == 1.0" },
+          { "hold_third_person": "context.is_first_person == 0.0" }
+        ]
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

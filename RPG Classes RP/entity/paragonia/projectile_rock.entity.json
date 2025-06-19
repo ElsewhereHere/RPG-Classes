@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "paragonia_classes:projectile_rock",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/paragonia/classes/entity/projectile_rock"
+      },
+      "geometry": {
+        "default": "geometry.paragonia_classes.projectile_rock"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}
