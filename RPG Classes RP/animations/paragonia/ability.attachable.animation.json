@@ -1,0 +1,249 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.ability.druid_1_idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"orb": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, 360, 0],
+						"2.0": [0, 720, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, 2, 0],
+						"2.0": [0, 0, 0]
+					}
+				},
+				"orbLayer1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, 0, 360],
+						"2.0": [0, 0, 0]
+					}
+				},
+				"orbLayer2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [360, 0, 0],
+						"2.0": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.ability.paladin_1_idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"ability": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, 0, 360]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"1.0": {
+							"pre": [1.2, 1.2, 1.2],
+							"post": [1.2, 1.2, 1.2],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": [1, 1, 1]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "idle",
+					"locator": "lead_hold"
+				},
+				"1.0": {
+					"effect": "idle",
+					"locator": "lead_hold"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "particle",
+					"locator": "lead_hold"
+				},
+				"1.0": {
+					"effect": "particle",
+					"locator": "lead_hold"
+				}
+			}
+		},
+		"animation.ability.paladin_2_idle": {
+			"loop": true,
+			"animation_length": 3,
+			"sound_effects": {
+				"0.2": {
+					"effect": "idle",
+					"locator": "lead_hold"
+				},
+				"0.9": {
+					"effect": "idle",
+					"locator": "lead_hold"
+				},
+				"1.9": {
+					"effect": "idle",
+					"locator": "lead_hold"
+				},
+				"2.3": {
+					"effect": "idle",
+					"locator": "lead_hold"
+				},
+				"2.9": {
+					"effect": "idle",
+					"locator": "lead_hold"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "particle",
+					"locator": "lead_hold"
+				},
+				"1.0": {
+					"effect": "particle",
+					"locator": "lead_hold"
+				},
+				"2.0": {
+					"effect": "particle",
+					"locator": "lead_hold"
+				}
+			}
+		},
+		"animation.ability.paladin_3_idle": {
+			"loop": true,
+			"animation_length": 2,
+			"sound_effects": {
+				"0.0": {
+					"effect": "idle",
+					"locator": "lead_hold"
+				},
+				"1.0": {
+					"effect": "idle",
+					"locator": "lead_hold"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "particle",
+					"locator": "lead_hold"
+				},
+				"1.0": {
+					"effect": "particle",
+					"locator": "lead_hold"
+				}
+			}
+		},
+		"animation.ability.paladin_1_cast": {
+			"animation_length": 0.5,
+			"bones": {
+				"ability": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, 0, 10]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.2": [3, 3, 3],
+						"0.25": {
+							"pre": [3, 3, 3],
+							"post": [0, 0, 0]
+						}
+					}
+				},
+				"shield1": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, -3, 0]
+					}
+				},
+				"shield2": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [-3, 1.5, 0]
+					}
+				},
+				"shield3": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [3, 1.5, 0]
+					}
+				},
+				"particle": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, 0, -5]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "cast",
+					"locator": "lead_hold"
+				}
+			}
+		},
+		"animation.ability.paladin_2_cast": {
+			"animation_length": 0.25,
+			"bones": {
+				"ability": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, 0, 10]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.2": [3, 3, 3],
+						"0.25": {
+							"pre": [3, 3, 3],
+							"post": [0, 0, 0]
+						}
+					}
+				},
+				"particle": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, 0, -5]
+					}
+				}
+			}
+		},
+		"animation.ability.paladin_3_cast": {
+			"animation_length": 0.25,
+			"bones": {
+				"ability": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, 0, 10]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.2": [3, 3, 3],
+						"0.25": {
+							"pre": [3, 3, 3],
+							"post": [0, 0, 0]
+						}
+					}
+				},
+				"particle": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, 0, -5]
+					}
+				}
+			}
+		},
+		"animation.ability.cooldown": {
+			"loop": true,
+			"bones": {
+				"ability": {
+					"scale": 0
+				}
+			}
+		}
+	}
+}

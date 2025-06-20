@@ -8,6 +8,7 @@ const HIT_RADIUS = 1.85;
 const activeFlames = new Map();
 
 export function SacredFlame(player) {
+  player.playAnimation("animation.paragonia_classes.player.sacred_flame");
   const dir = player.getViewDirection();
   const loc = player.location;
   const start = {
@@ -59,7 +60,7 @@ mc.system.runInterval(() => {
         //player?.sendMessage(`§e[Debug] Hit entity: §f${hit.typeId}`);
 
         hit.applyDamage(6);
-        hit.addEffect("blindness", 30, { amplifier: 0, showParticles: true });
+        hit.addEffect("blindness", 60, { amplifier: 0, showParticles: true });
 
         const effects = hit.getEffects();
         if (effects.find(e => e.typeId === "invisibility")) {

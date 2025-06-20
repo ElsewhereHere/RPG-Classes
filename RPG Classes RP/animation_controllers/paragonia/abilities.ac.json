@@ -1,15 +1,56 @@
 {
-	"format_version": "1.10.0",
-	"animation_controllers": {
-		"controller.animation.paragonia_classes.abilities": {
-			"initial_state": "default",
-			"states": {
-				"default": {
-					"animations": [
-						"idle"
-					]
-				}
-			}
-		}
-	}
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.paragonia_classes.paladin_ability_1": {
+      "initial_state": "cooldown",
+      "states": {
+		    "cooldown": {
+          "animations": ["cooldown"],
+          "transitions": [{"idle": "query.is_selected_item && query.is_cooldown_type('paragonia_classes:ability_paladin_1', 'slot.weapon.mainhand') && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"}],"blend_transition": 0.2
+        },
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [{"cast": "query.is_cooldown_type('paragonia_classes:ability_paladin_1', 'slot.weapon.mainhand') && query.cooldown_time_remaining('slot.weapon.mainhand') > 0"}],"blend_transition": 0
+        },
+		    "cast": {
+          "animations": ["cast"],
+          "transitions": [{"cooldown": "query.any_animation_finished"}],"blend_transition": 0
+        }
+      }
+    },
+    "controller.animation.paragonia_classes.paladin_ability_2": {
+      "initial_state": "cooldown",
+      "states": {
+		    "cooldown": {
+          "animations": ["cooldown"],
+          "transitions": [{"idle": "query.is_selected_item && query.is_cooldown_type('paragonia_classes:ability_paladin_2', 'slot.weapon.mainhand') && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"}],"blend_transition": 0.2
+        },
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [{"cast": "query.is_cooldown_type('paragonia_classes:ability_paladin_2', 'slot.weapon.mainhand') && query.cooldown_time_remaining('slot.weapon.mainhand') > 0"}],"blend_transition": 0
+        },
+		    "cast": {
+          "animations": ["cast"],
+          "transitions": [{"cooldown": "query.any_animation_finished"}],"blend_transition": 0
+        }
+      }
+    },
+    "controller.animation.paragonia_classes.paladin_ability_3": {
+      "initial_state": "cooldown",
+      "states": {
+		    "cooldown": {
+          "animations": ["cooldown"],
+          "transitions": [{"idle": "query.is_selected_item && query.is_cooldown_type('paragonia_classes:ability_paladin_3', 'slot.weapon.mainhand') && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"}],"blend_transition": 0.2
+        },
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [{"cast": "query.is_cooldown_type('paragonia_classes:ability_paladin_3', 'slot.weapon.mainhand') && query.cooldown_time_remaining('slot.weapon.mainhand') > 0"}],"blend_transition": 0
+        },
+		    "cast": {
+          "animations": ["cast"],
+          "transitions": [{"cooldown": "query.any_animation_finished"}],"blend_transition": 0
+        }
+      }
+    }
+  }
 }

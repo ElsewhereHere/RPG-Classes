@@ -69,6 +69,7 @@ function grantRadiantShield(player) {
 
   // Immediate pulse sound at cast
   dimension.playSound("paragonia_classes.paladin_ability_1_pulse", center);
+  player.playAnimation("animation.paragonia_classes.player.radiant_shield");
 
   // Pulse sound every 1.5 seconds
   const pulseInterval = mc.system.runInterval(() => {

@@ -167,6 +167,22 @@
         { "name": "sounds/paragonia/classes/paladin_ability_1_pulse", "volume": 1, "pitch": 1 }
       ]
     },
+    "paragonia_classes.paladin_ability_1_idle": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 5,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/paladin_ability_1_idle", "volume": 0.05, "pitch": 1 }
+      ]
+    },
+    "paragonia_classes.paladin_ability_1_cast": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 10,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/paladin_ability_1_cast", "volume": 0.65, "pitch": 1 }
+      ]
+    },
     "paragonia_classes.paladin_ability_2": {
       "category": "player",
       "min_distance": 0,
@@ -175,6 +191,18 @@
         { "name": "sounds/paragonia/classes/paladin_ability_2", "volume": 0.1, "pitch": 1 },
         { "name": "sounds/paragonia/classes/paladin_ability_2", "volume": 0.1, "pitch": 1.1 },
         { "name": "sounds/paragonia/classes/paladin_ability_2", "volume": 0.1, "pitch": 0.9 }
+      ]
+    },
+    "paragonia_classes.paladin_ability_2_idle": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 5,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/paladin_ability_2_idle", "volume": 0.05, "pitch": 1 },
+        { "name": "sounds/paragonia/classes/paladin_ability_2_idle", "volume": 0.05, "pitch": 1.1 },
+        { "name": "sounds/paragonia/classes/paladin_ability_2_idle", "volume": 0.05, "pitch": 0.9 },
+        { "name": "sounds/paragonia/classes/paladin_ability_2_idle", "volume": 0.05, "pitch": 1.2 },
+        { "name": "sounds/paragonia/classes/paladin_ability_2_idle", "volume": 0.05, "pitch": 0.8 }
       ]
     },
     "paragonia_classes.paladin_ability_2_shimmer": {
@@ -194,6 +222,14 @@
         { "name": "sounds/paragonia/classes/paladin_ability_3", "volume": 0.75, "pitch": 1 },
         { "name": "sounds/paragonia/classes/paladin_ability_3", "volume": 0.75, "pitch": 1.1 },
         { "name": "sounds/paragonia/classes/paladin_ability_3", "volume": 0.75, "pitch": 0.9 }
+      ]
+    },
+    "paragonia_classes.paladin_ability_3_idle": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 5,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/paladin_ability_3_idle", "volume": 0.05, "pitch": 1 }
       ]
     },
     "paragonia_classes.paladin_ability_3_impact": {

@@ -213,7 +213,7 @@ function showClassHubForm(player, block, currentClassTag) {
     .body(`\n${player.name}\n\n§7Class: §r${currentClassName}\n${subclassLine}\n`)
     .button("Class Information", iconPathClass)
     .button("Subclass Information", iconPathSubclass)
-    //.divider()
+    .divider()
     .button("Change Class")
     .button("Change Subclass");
 
@@ -441,7 +441,7 @@ function showClassInformationPaladin(player, block, currentClassTag) {
   const form = new ActionFormData()
     .title("Class Shrine")
     .body(`\n§ePaladin§r\n
-The Paladin is a support class who combines melee combat with radiant magic, shielding allies, smiting foes and healing allies.
+The Paladin is a warrior who combines melee combat with radiant magic, shielding allies, smiting foes and healing allies.
 §8-------------------------------\n
 §7Weapon Proficiencies: §rFlail, Mace\n
 §7Paladin Outfit: §rGrants Absorption after taking 10 Damage\n\n`)
@@ -527,7 +527,7 @@ function showClassInformationPaladinSacredFlame(player, block, currentClassTag) 
   const form = new ActionFormData()
     .title("Class Shrine")
     .body(`\n§eSacred Flame\n
-§rHurl a searing mote of radiant fire that applies Blindness for 3 seconds and reveals the target if they are Invisible.\n
+§rHurl a searing mote of radiant fire that applies Blindness for 1 second and reveals the target if they are Invisible.\n
 §7Type: §rAbility
 §7Target: §rOther
 §7Cooldown: §r8s`)
