@@ -1,0 +1,41 @@
+{
+  "format_version": "1.19.80",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "paragonia_classes:utility_paladin_1",
+      "materials": {
+        "default": "paragonia_classes_emissive_blend_additive",
+        "outline": "paragonia_classes_emissive_blend_additive"
+      },
+      "textures": {
+        "default": "textures/paragonia/classes/attachables/empty"
+      },
+      "geometry": {
+        "default": "geometry.paragonia_classes.utility_paladin_1"
+      },
+      "particle_effects": {
+        "particle": "paragonia_classes:paladin_utility_1"
+      },
+      "sound_effects": {
+        "idle": "paragonia_classes.paladin_utility_1_idle",
+        "cast": "paragonia_classes.paladin_utility_1_cast"
+      },
+      "animations": {
+        "controller": "controller.animation.paragonia_classes.paladin_utility_1",
+        "hold_first_person": "animation.attachable_display.hold_first_person",
+        "hold_third_person": "animation.attachable_display.hold_third_person",
+        "idle": "animation.utility.paladin_1_idle",
+        "cast": "animation.utility.paladin_1_cast",
+        "cooldown": "animation.ability.cooldown"
+      },
+      "scripts": {
+        "animate": [
+          "controller",
+          { "hold_first_person": "context.is_first_person == 1.0" },
+          { "hold_third_person": "context.is_first_person == 0.0" }
+        ]
+      },
+      "render_controllers": ["controller.render.paragonia_classes.ability"]
+    }
+  }
+}

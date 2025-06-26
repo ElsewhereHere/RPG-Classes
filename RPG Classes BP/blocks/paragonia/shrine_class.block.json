@@ -4,7 +4,7 @@
     "description": {
       "identifier": "paragonia_classes:shrine_class",
       "menu_category": {
-        "category": "construction"
+        "category": "items"
       },
       "states": {
         "paragonia_classes:is_active": [false, true]
@@ -59,8 +59,10 @@
       "minecraft:selection_box": true,
       "minecraft:light_emission": 0,
       "minecraft:light_dampening": 0,
+      "tag:minecraft:is_pickaxe_item_destructible": {},
+      "tag:minecraft:stone_tier_destructible": {},
       "minecraft:destructible_by_mining": {
-        "seconds_to_destroy": 1
+        "seconds_to_destroy": 2
       }
     }
   }

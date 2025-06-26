@@ -4,13 +4,10 @@
     "description": {
       "identifier": "paragonia_classes:target_dummy_undead"
     },
-    "unlock": [
-      {
-        "item": "paragonia_classes:recipe_book",
-        "data": 1
-      }
-    ],
-    "tags": ["crafting_table"],
+    "unlock": {
+      "context": "AlwaysUnlocked"
+    },
+    "tags": ["paragonia_classes:rpg_crafting"],
     "key": {
       "T": {
         "item": "minecraft:target"

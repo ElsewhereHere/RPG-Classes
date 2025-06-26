@@ -1,0 +1,33 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "paragonia_classes:shrine_class"
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+    },
+    "tags": ["crafting_table", "paragonia_classes:rpg_crafting"],
+    "key": {
+      "Q": {
+        "item": "minecraft:chiseled_quartz_block"
+      },
+      "B": {
+        "item": "minecraft:blaze_powder"
+      },
+      "S": {
+        "item": "minecraft:quartz_slab"
+      },
+      "P": {
+        "item": "minecraft:quartz_pillar"
+      }
+    },
+    "pattern": [
+      " B ", 
+      "PQP",
+      "SSS"],
+    "result": {
+      "item": "paragonia_classes:shrine_class"
+    }
+  }
+}

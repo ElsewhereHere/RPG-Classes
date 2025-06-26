@@ -4,13 +4,10 @@
     "description": {
       "identifier": "paragonia_classes:battle_axe"
     },
-    "unlock": [
-      {
-        "item": "paragonia_classes:recipe_book",
-        "data": 1
-      }
-    ],
-    "tags": ["crafting_table"],
+    "unlock": {
+      "context": "AlwaysUnlocked"
+    },
+    "tags": ["paragonia_classes:rpg_crafting"],
     "key": {
       "I": {
         "item": "minecraft:iron_ingot"

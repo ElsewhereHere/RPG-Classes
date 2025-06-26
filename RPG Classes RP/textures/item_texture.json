@@ -65,6 +65,7 @@
     "paragonia_classes_ability_druid_2": {"textures": "textures/paragonia/classes/items/ability_druid_2"},
     "paragonia_classes_ability_druid_3": {"textures": "textures/paragonia/classes/items/ability_druid_3"},
     "paragonia_classes_ability_druid_ult": {"textures": "textures/paragonia/classes/items/ability_druid_ult"},
+    "paragonia_classes_ability_druid_ult_alt": {"textures": "textures/paragonia/classes/items/ability_druid_ult_alt"},
 
     "paragonia_classes_utility_druid_1": {"textures": "textures/paragonia/classes/items/utility_druid_1"},
     "paragonia_classes_utility_druid_2": {"textures": "textures/paragonia/classes/items/utility_druid_2"},

@@ -8,13 +8,14 @@ pack.description=Choose from 10 RPG Classes, from Wizards to Rogues!
 
 
 tile.paragonia_classes:shrine_class.name=Class Shrine
+tile.paragonia_classes:class_crafting_table.name=Class Crafting Table
 
 item.paragonia_classes:recipe_book=RPG Classes Recipe Book
 
 item.spawn_egg.entity.paragonia_classes:target_dummy.name=Target Dummy
-tile.paragonia_classes:target_dummy.name=Target Dummy
+entity.paragonia_classes:target_dummy.name=Target Dummy
 item.spawn_egg.entity.paragonia_classes:target_dummy_display.name=Target Dummy Display
-tile.paragonia_classes:target_dummy_display.name=Target Dummy Display
+entity.paragonia_classes:target_dummy_display.name=Target Dummy Display
 
 
 ## Barbarian
@@ -53,7 +54,7 @@ item.paragonia_classes:ability_paladin_3=§eSacred Flame
 item.paragonia_classes:ability_paladin_ult=§eDivine Ascension
 
 item.paragonia_classes:utility_paladin_1=§eCleanse
-item.paragonia_classes:utility_paladin_2=§ePurify
+item.paragonia_classes:utility_paladin_2=§eSanctify
 
 item.paragonia_classes:radiant_orb=Radiant Orb
 item.spawn_egg.entity.paragonia_classes:target_dummy_undead.name=Undead Target Dummy
@@ -71,7 +72,8 @@ item.paragonia_classes:druid_shoes=Druid Shoes
 item.paragonia_classes:ability_druid_1=§aEntangle
 item.paragonia_classes:ability_druid_2=§aBarkskin
 item.paragonia_classes:ability_druid_3=§aSoothing Spores
-item.paragonia_classes:ability_druid_ult=§aForest Guardian
+item.paragonia_classes:ability_druid_ult=§aWild Shape
+item.paragonia_classes:ability_druid_ult_alt=§aClaw Slash
 
 item.paragonia_classes:utility_druid_1=§aDruidcraft
 item.paragonia_classes:utility_druid_2=§aSpeak With Animals

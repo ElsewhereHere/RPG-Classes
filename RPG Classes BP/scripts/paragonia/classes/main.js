@@ -5,6 +5,7 @@ import "paragonia/classes/target_dummy/target_dummy.js";
 //Outfits
 import "./classes/barbarian_outfit.js";
 import "./classes/paladin_outfit.js";
+import "./classes/druid_outfit.js";
 
 //Abilities
 import { BattleCry } from "./classes/barbarian_ability_1.js";
@@ -13,19 +14,26 @@ import { Frenzy } from "./classes/barbarian_ability_3.js";
 import { RadiantShield } from "./classes/paladin_ability_1.js";
 import { RestoringLight } from "./classes/paladin_ability_2.js";
 import { SacredFlame } from "./classes/paladin_ability_3.js";
+import { Entangle } from "./classes/druid_ability_1.js";
+import { Barkskin } from "./classes/druid_ability_2.js";
+import { SoothingSpores } from "./classes/druid_ability_3.js";
 
 //Ultimates
 import { Rage } from "./classes/barbarian_ability_ult.js";
 import { DivineAscension } from "./classes/paladin_ability_ult.js";
+import { WildShape, ClawSlash } from "./classes/druid_ability_ult.js";
 
 //Utilities
 import "./classes/barbarian_utility_2.js";
 import { VentSteam } from "./classes/barbarian_utility_1.js";
 import { CleanseSelf, CleanseEntity } from "./classes/paladin_utility_1.js";
+import { Sanctify } from "./classes/paladin_utility_2.js";
+import { Druidcraft } from "./classes/druid_utility_1.js";
 
 
 //Items
 import "./items/radiant_orb.js";
+
 
 //    ABILITY
 //-----------------
@@ -79,6 +87,38 @@ const abilityHandlers = {
     tags: [
       "paragonia_classes:class_paladin",
       "paragonia_classes:subclass_paladin",
+    ],
+  },
+  "paragonia_classes:ability_druid_1": {
+    class_name: "§aDruid",
+    handler: Entangle,
+    tags: [
+      "paragonia_classes:class_druid",
+      "paragonia_classes:subclass_druid",
+    ],
+  },
+  "paragonia_classes:ability_druid_2": {
+    class_name: "§aDruid",
+    handler: Barkskin,
+    tags: [
+      "paragonia_classes:class_druid",
+      "paragonia_classes:subclass_druid",
+    ],
+  },
+  "paragonia_classes:ability_druid_3": {
+    class_name: "§aDruid",
+    handler: SoothingSpores,
+    tags: [
+      "paragonia_classes:class_druid",
+      "paragonia_classes:subclass_druid",
+    ],
+  },
+  "paragonia_classes:ability_druid_ult_alt": {
+    class_name: "§aDruid",
+    handler: ClawSlash,
+    tags: [
+      "paragonia_classes:class_druid",
+      "paragonia_classes:subclass_druid",
     ],
   },
 };
@@ -200,6 +240,16 @@ const ultimateHandlers = {
     ],
     cooldownTag: "paragonia_classes:ability_paladin_ult",
   },
+  "paragonia_classes:ability_druid_ult": {
+    class: "druid",
+    class_name: "§aDruid",
+    handler: WildShape,
+    tags: [
+      "paragonia_classes:class_druid",
+      "paragonia_classes:subclass_druid",
+    ],
+    cooldownTag: "paragonia_classes:ability_druid_ult",
+  },
 };
 
 //Ultimate Generation Item Definitions
@@ -215,6 +265,9 @@ const ultimateChargeMap = {
   // Paladin
   "paragonia_classes:flail": { class_id: "paladin", amount: 5 },
   "minecraft:mace": { class_id: "paladin", amount: 10 },
+  // Druid
+  "paragonia_classes:wand": { class_id: "druid", amount: 5 },
+  "paragonia_classes:staff": { class_id: "druid", amount: 10 }
 };
 
 
@@ -368,16 +421,38 @@ const utilityHandlers = {
     }
   },*/
   "paragonia_classes:utility_paladin_1": {
-  class_name: "§ePaladin",
-  tags: [
-    "paragonia_classes:class_paladin",
-    "paragonia_classes:subclass_paladin"
-  ],
-  cooldownCategory: "paragonia_classes:utility_paladin_1",
-  contexts: {
-    use: CleanseSelf,
-    entityInteract: CleanseEntity
-  }
+    class_name: "§ePaladin",
+    tags: [
+      "paragonia_classes:class_paladin",
+      "paragonia_classes:subclass_paladin"
+    ],
+    cooldownCategory: "paragonia_classes:utility_paladin_1",
+    contexts: {
+      use: CleanseSelf,
+      entityInteract: CleanseEntity
+    }
+  },
+  "paragonia_classes:utility_paladin_2": {
+    class_name: "§ePaladin",
+    tags: [
+      "paragonia_classes:class_paladin",
+      "paragonia_classes:subclass_paladin"
+    ],
+    cooldownCategory: "paragonia_classes:utility_paladin_2",
+    contexts: {
+      use: Sanctify
+    }
+  },
+  "paragonia_classes:utility_druid_1": {
+    class_name: "§aDruid",
+    tags: [
+      "paragonia_classes:class_druid",
+      "paragonia_classes:subclass_druid"
+    ],
+    cooldownCategory: "paragonia_classes:utility_druid_1",
+    contexts: {
+      use: Druidcraft
+    }
 },
 };
 

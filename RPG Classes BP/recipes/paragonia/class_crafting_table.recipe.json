@@ -1,0 +1,33 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "paragonia_classes:class_crafting_table"
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+    },
+    "tags": ["crafting_table", "paragonia_classes:rpg_crafting"],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_nugget"
+      },
+      "L": {
+        "item": "minecraft:leather"
+      },
+      "/": {
+        "item": "minecraft:crafting_table"
+      },
+      "P": {
+        "tag": "minecraft:planks"
+      }
+    },
+    "pattern": [
+      "ILI", 
+      "P/P",
+      "P P"],
+    "result": {
+      "item": "paragonia_classes:class_crafting_table"
+    }
+  }
+}

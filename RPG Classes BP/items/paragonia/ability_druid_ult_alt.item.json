@@ -1,0 +1,34 @@
+{
+  "format_version": "1.21.70",
+  "minecraft:item": {
+    "description": {
+      "identifier": "paragonia_classes:ability_druid_ult_alt",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:dyeable": {
+        "default_color": "#FFFFFF"
+      },
+      "minecraft:tags": {
+        "tags": [
+          "paragonia_classes:ability",
+          "paragonia_classes:druid",
+          "paragonia_classes:arm_visible"
+        ]
+      },
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:icon": {
+        "textures": {
+          "default": "paragonia_classes_ability_druid_ult_alt"
+        }
+      },
+      "minecraft:cooldown": {
+        "category": "paragonia_classes:ability_druid_ult_alt",
+        "duration": 2
+      },
+      "minecraft:max_stack_size": 1
+    }
+  }
+}

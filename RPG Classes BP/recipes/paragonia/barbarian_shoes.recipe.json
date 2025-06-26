@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "paragonia_classes:barbarian_shoes"
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+    },
+    "tags": ["paragonia_classes:rpg_crafting"],
+    "key": {
+      "W": {
+        "item": "minecraft:red_wool"
+      }
+    },
+    "pattern": [
+      "W W", 
+      "W W"],
+    "result": {
+      "item": "paragonia_classes:barbarian_shoes"
+    }
+  }
+}

@@ -8,7 +8,7 @@
         "outline": "paragonia_classes_emissive_blend_additive"
       },
       "textures": {
-        "default": "textures/paragonia/classes/attachables/ability_paladin_ult"
+        "default": "textures/paragonia/classes/attachables/empty"
       },
       "geometry": {
         "default": "geometry.paragonia_classes.ability_paladin_ult"

@@ -27,6 +27,14 @@ function startBarbarianOutfitCheck() {
         continue;
       }
 
+      if (
+        !player.hasTag("paragonia_classes:class_barbarian") &&
+        !player.hasTag("paragonia_classes:subclass_barbarian")
+      ) {
+        stateByPlayer.delete(player.id);
+        continue;
+      }
+
       const healthComp = player.getComponent("minecraft:health");
       if (!healthComp) continue;
 
@@ -62,7 +70,6 @@ function startBarbarianOutfitCheck() {
             player.playSound("paragonia_classes.barbarian_outfit_loop");
             state.loopTickCounter = 20;
           }
-
         } else {
           // First-time activation
           player.addEffect("minecraft:strength", 40, {
@@ -75,7 +82,6 @@ function startBarbarianOutfitCheck() {
           state.flareUpPlayed = true;
           state.loopTickCounter = 20;
         }
-
       } else {
         if (player.hasTag("paragonia_classes:barbarian_outfit_strength")) {
           player.removeEffect("minecraft:strength");

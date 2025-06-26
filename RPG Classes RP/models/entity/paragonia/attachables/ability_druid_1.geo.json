@@ -1,14 +1,14 @@
 {
-	"format_version": "1.21.0",
+	"format_version": "1.12.0",
 	"minecraft:geometry": [
 		{
 			"description": {
 				"identifier": "geometry.paragonia_classes.ability_druid_1",
-				"texture_width": 32,
-				"texture_height": 32,
-				"visible_bounds_width": 2,
-				"visible_bounds_height": 1.5,
-				"visible_bounds_offset": [0, 0.25, 0]
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
 			},
 			"bones": [
 				{
@@ -26,86 +26,97 @@
 					"pivot": [0, 24, 0]
 				},
 				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "cape",
+					"parent": "body",
+					"pivot": [0, 24, 3]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "leftSleeve",
+					"parent": "leftArm",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "leftItem",
+					"parent": "leftArm",
+					"pivot": [6, 15, 1]
+				},
+				{
 					"name": "rightArm",
 					"parent": "body",
+					"pivot": [-5, 22, 0],
+					"cubes": [
+						{
+							"origin": [-8, 12, -2],
+							"size": [4, 12, 4],
+							"uv": {}
+						}
+					]
+				},
+				{
+					"name": "rightSleeve",
+					"parent": "rightArm",
 					"pivot": [-5, 22, 0]
 				},
 				{
 					"name": "rightItem",
 					"parent": "rightArm",
-					"pivot": [-6, 15, 1]
+					"pivot": [-6, 15, 1],
+					"locators": {
+						"lead_hold": [-6, 15, 1]
+					}
 				},
 				{
-					"name": "item",
+					"name": "ability",
 					"parent": "rightItem",
-					"pivot": [0, 0, 0]
+					"pivot": [-6, 14, -2]
 				},
 				{
-					"name": "orb",
-					"parent": "item",
-					"pivot": [0, 0, 0],
-					"cubes": [
-						{
-							"origin": [-2, 0, -2],
-							"size": [4, 4, 4],
-							"uv": {
-								"north": {"uv": [0, 0], "uv_size": [8, 8]},
-								"east": {"uv": [0, 0], "uv_size": [8, 8]},
-								"south": {"uv": [0, 0], "uv_size": [8, 8]},
-								"west": {"uv": [0, 0], "uv_size": [8, 8]},
-								"up": {"uv": [8, 8], "uv_size": [-8, -8]},
-								"down": {"uv": [8, 8], "uv_size": [-8, -8]}
-							}
-						},
-						{
-							"origin": [-1, 1, -1],
-							"size": [2, 2, 2],
-							"uv": {
-								"north": {"uv": [2, 10], "uv_size": [4, 4]},
-								"east": {"uv": [2, 10], "uv_size": [4, 4]},
-								"south": {"uv": [2, 10], "uv_size": [4, 4]},
-								"west": {"uv": [2, 10], "uv_size": [4, 4]},
-								"up": {"uv": [6, 14], "uv_size": [-4, -4]},
-								"down": {"uv": [6, 14], "uv_size": [-4, -4]}
-							}
-						}
-					]
+					"name": "particle",
+					"parent": "ability",
+					"pivot": [-6, 14, -2],
+					"locators": {
+						"particle": [-6, 14, -2]
+					}
 				},
 				{
-					"name": "orbLayer1",
-					"parent": "orb",
-					"pivot": [0, 2, 0],
-					"cubes": [
-						{
-							"origin": [-2, 0, -2],
-							"size": [4, 4, 4],
-							"inflate": 0.25,
-							"uv": {
-								"east": {"uv": [16, 8], "uv_size": [-8, -8], "uv_rotation": 90},
-								"west": {"uv": [16, 8], "uv_size": [-8, -8], "uv_rotation": 270},
-								"up": {"uv": [8, 0], "uv_size": [8, 8]},
-								"down": {"uv": [8, 0], "uv_size": [8, 8], "uv_rotation": 180}
-							}
-						}
-					]
+					"name": "jacket",
+					"parent": "body",
+					"pivot": [0, 24, 0]
 				},
 				{
-					"name": "orbLayer2",
-					"parent": "orb",
-					"pivot": [0, 2, 0],
-					"cubes": [
-						{
-							"origin": [-2, 0, -2],
-							"size": [4, 4, 4],
-							"inflate": 0.25,
-							"uv": {
-								"north": {"uv": [16, 8], "uv_size": [-8, -8], "uv_rotation": 90},
-								"south": {"uv": [16, 8], "uv_size": [-8, -8], "uv_rotation": 270},
-								"up": {"uv": [8, 0], "uv_size": [8, 8], "uv_rotation": 270},
-								"down": {"uv": [8, 0], "uv_size": [8, 8], "uv_rotation": 270}
-							}
-						}
-					]
+					"name": "leftLeg",
+					"parent": "root",
+					"pivot": [1.9, 12, 0]
+				},
+				{
+					"name": "leftPants",
+					"parent": "leftLeg",
+					"pivot": [1.9, 12, 0]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "root",
+					"pivot": [-1.9, 12, 0]
+				},
+				{
+					"name": "rightPants",
+					"parent": "rightLeg",
+					"pivot": [-1.9, 12, 0]
 				}
 			]
 		}

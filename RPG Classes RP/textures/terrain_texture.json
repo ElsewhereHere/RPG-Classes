@@ -6,7 +6,8 @@
   "texture_data": {
 
     "paragonia_classes_null": {"textures": "textures/paragonia/classes/blocks/null"},
-    "paragonia_classes_shrine_class": {"textures": "textures/paragonia/classes/blocks/shrine_class"}
+    "paragonia_classes_shrine_class": {"textures": "textures/paragonia/classes/blocks/shrine_class"},
+    "paragonia_classes_class_crafting_table": {"textures": "textures/paragonia/classes/blocks/class_crafting_table"}
   
   }
 }

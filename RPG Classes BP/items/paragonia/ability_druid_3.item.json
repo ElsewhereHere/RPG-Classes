@@ -8,15 +8,6 @@
       }
     },
     "components": {
-      "minecraft:food": {
-        "nutrition": 0,
-        "can_always_eat": true
-      },
-      "minecraft:use_modifiers": {
-        "use_duration": 340282346638528859811704183484516925440,
-        "movement_modifier": 1.0
-      },
-      //"minecraft:custom_components": ["paragonia_classes:ability"],
       "minecraft:tags": {
         "tags": [
           "paragonia_classes:ability",
@@ -27,8 +18,8 @@
       "minecraft:can_destroy_in_creative": false,
       "minecraft:icon": "paragonia_classes_ability_druid_3",
       "minecraft:cooldown": {
-        "category": "ability_druid_3",
-        "duration": 30
+        "category": "paragonia_classes:ability_druid_3",
+        "duration": 12
       },
       "minecraft:max_stack_size": 1
     }

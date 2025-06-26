@@ -59,6 +59,9 @@ export function BruteForceBlock(player, item, block, blockFace) {
     "minecraft:structure_block",
     "minecraft:end_portal",
     "minecraft:end_gateway",
+    "minecraft:spawner",
+    "minecraft:trial_spawner",
+    "minecraft:enchanting_table"
     // Add more block IDs here as needed
   ]);
 

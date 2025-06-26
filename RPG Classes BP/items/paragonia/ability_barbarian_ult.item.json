@@ -28,8 +28,7 @@
       "minecraft:can_destroy_in_creative": false,
       "minecraft:icon": {
         "textures": {
-          "default": "paragonia_classes_ability_barbarian_ult",
-          "dyed": "paragonia_classes_ability_barbarian_ult_dyed"
+          "default": "paragonia_classes_ability_barbarian_ult"
         }
       },
       "minecraft:cooldown": {

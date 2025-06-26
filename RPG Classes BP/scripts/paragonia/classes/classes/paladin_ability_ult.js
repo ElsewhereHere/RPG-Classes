@@ -8,7 +8,8 @@ export function DivineAscension(player) {
   player.addTag(ULTIMATE_TAG);
 
   // Start levitation and visuals
-  player.dimension.playSound("paragonia_classes.paladin_ability_ult", player.location);
+  player.dimension.playSound("paragonia_classes.paladin_ability_ult_choir", player.location);
+  player.dimension.spawnParticle("paragonia_classes:paladin_divine_ascension", player.location);
   player.playAnimation("animation.paragonia_classes.player.divine_ascension_1");
   player.addEffect("levitation", ASCEND_DURATION_TICKS, {
     amplifier: 2,

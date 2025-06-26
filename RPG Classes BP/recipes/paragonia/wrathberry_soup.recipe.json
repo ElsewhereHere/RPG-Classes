@@ -4,13 +4,10 @@
     "description": {
       "identifier": "paragonia_classes:wrathberry_soup"
     },
-    "unlock": [
-      {
-        "item": "paragonia_classes:recipe_book",
-        "data": 1
-      }
-    ],
-    "tags": ["crafting_table"],
+    "unlock": {
+      "context": "AlwaysUnlocked"
+    },
+    "tags": ["paragonia_classes:rpg_crafting"],
     "ingredients": [
       {
         "item": "minecraft:beetroot_soup",
