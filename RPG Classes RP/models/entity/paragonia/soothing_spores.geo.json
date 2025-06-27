@@ -1,0 +1,523 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.paragonia_classes.soothing_spores",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 8,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "mushrooms",
+					"parent": "root",
+					"pivot": [0, 0, 8],
+					"rotation": [-180, 0, 180]
+				},
+				{
+					"name": "mushroom1",
+					"parent": "mushrooms",
+					"pivot": [-15, 0, 5],
+					"cubes": [
+						{
+							"origin": [-17, 3, 3],
+							"size": [4, 3, 4],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [4, 3]},
+								"east": {"uv": [0, 10], "uv_size": [4, 3]},
+								"south": {"uv": [0, 10], "uv_size": [4, 3]},
+								"west": {"uv": [0, 10], "uv_size": [4, 3]},
+								"up": {"uv": [4, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [-16, 0, 4],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [1, 13], "uv_size": [2, 3]},
+								"east": {"uv": [1, 13], "uv_size": [2, 3]},
+								"south": {"uv": [1, 13], "uv_size": [2, 3]},
+								"west": {"uv": [1, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_1",
+					"parent": "mushroom1",
+					"pivot": [-15, 3, 5],
+					"cubes": [
+						{
+							"origin": [-17, 3, 3],
+							"size": [4, 3, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [4, 3]},
+								"east": {"uv": [12, 10], "uv_size": [4, 3]},
+								"south": {"uv": [12, 10], "uv_size": [4, 3]},
+								"west": {"uv": [12, 10], "uv_size": [4, 3]},
+								"up": {"uv": [16, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [16, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [-16, 0, 4],
+							"size": [2, 3, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [2, 3]},
+								"east": {"uv": [13, 13], "uv_size": [2, 3]},
+								"south": {"uv": [13, 13], "uv_size": [2, 3]},
+								"west": {"uv": [13, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "mushroom2",
+					"parent": "mushrooms",
+					"pivot": [14, 0, 11],
+					"cubes": [
+						{
+							"origin": [12, 3, 9],
+							"size": [4, 3, 4],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [4, 3]},
+								"east": {"uv": [0, 10], "uv_size": [4, 3]},
+								"south": {"uv": [0, 10], "uv_size": [4, 3]},
+								"west": {"uv": [0, 10], "uv_size": [4, 3]},
+								"up": {"uv": [4, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [13, 0, 10],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [1, 13], "uv_size": [2, 3]},
+								"east": {"uv": [1, 13], "uv_size": [2, 3]},
+								"south": {"uv": [1, 13], "uv_size": [2, 3]},
+								"west": {"uv": [1, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_2",
+					"parent": "mushroom2",
+					"pivot": [14, 3, 11],
+					"cubes": [
+						{
+							"origin": [12, 3, 9],
+							"size": [4, 3, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [4, 3]},
+								"east": {"uv": [12, 10], "uv_size": [4, 3]},
+								"south": {"uv": [12, 10], "uv_size": [4, 3]},
+								"west": {"uv": [12, 10], "uv_size": [4, 3]},
+								"up": {"uv": [16, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [16, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [13, 0, 10],
+							"size": [2, 3, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [2, 3]},
+								"east": {"uv": [13, 13], "uv_size": [2, 3]},
+								"south": {"uv": [13, 13], "uv_size": [2, 3]},
+								"west": {"uv": [13, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "mushroom3",
+					"parent": "mushrooms",
+					"pivot": [-4, 0, 21],
+					"cubes": [
+						{
+							"origin": [-6, 3, 19],
+							"size": [4, 3, 4],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [4, 3]},
+								"east": {"uv": [0, 10], "uv_size": [4, 3]},
+								"south": {"uv": [0, 10], "uv_size": [4, 3]},
+								"west": {"uv": [0, 10], "uv_size": [4, 3]},
+								"up": {"uv": [4, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [-5, 0, 20],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [1, 13], "uv_size": [2, 3]},
+								"east": {"uv": [1, 13], "uv_size": [2, 3]},
+								"south": {"uv": [1, 13], "uv_size": [2, 3]},
+								"west": {"uv": [1, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_3",
+					"parent": "mushroom3",
+					"pivot": [-4, 3, 21],
+					"cubes": [
+						{
+							"origin": [-6, 3, 19],
+							"size": [4, 3, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [4, 3]},
+								"east": {"uv": [12, 10], "uv_size": [4, 3]},
+								"south": {"uv": [12, 10], "uv_size": [4, 3]},
+								"west": {"uv": [12, 10], "uv_size": [4, 3]},
+								"up": {"uv": [16, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [16, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [-5, 0, 20],
+							"size": [2, 3, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [2, 3]},
+								"east": {"uv": [13, 13], "uv_size": [2, 3]},
+								"south": {"uv": [13, 13], "uv_size": [2, 3]},
+								"west": {"uv": [13, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "mushroom4",
+					"parent": "mushrooms",
+					"pivot": [-22, 0, 39],
+					"cubes": [
+						{
+							"origin": [-23, 0, 38],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [1, 13], "uv_size": [2, 3]},
+								"east": {"uv": [1, 13], "uv_size": [2, 3]},
+								"south": {"uv": [1, 13], "uv_size": [2, 3]},
+								"west": {"uv": [1, 13], "uv_size": [2, 3]}
+							}
+						},
+						{
+							"origin": [-24, 3, 37],
+							"size": [4, 3, 4],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [4, 3]},
+								"east": {"uv": [0, 10], "uv_size": [4, 3]},
+								"south": {"uv": [0, 10], "uv_size": [4, 3]},
+								"west": {"uv": [0, 10], "uv_size": [4, 3]},
+								"up": {"uv": [4, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 10], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_4",
+					"parent": "mushroom4",
+					"pivot": [-22, 3, 39],
+					"cubes": [
+						{
+							"origin": [-23, 0, 38],
+							"size": [2, 3, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [2, 3]},
+								"east": {"uv": [13, 13], "uv_size": [2, 3]},
+								"south": {"uv": [13, 13], "uv_size": [2, 3]},
+								"west": {"uv": [13, 13], "uv_size": [2, 3]}
+							}
+						},
+						{
+							"origin": [-24, 3, 37],
+							"size": [4, 3, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [4, 3]},
+								"east": {"uv": [12, 10], "uv_size": [4, 3]},
+								"south": {"uv": [12, 10], "uv_size": [4, 3]},
+								"west": {"uv": [12, 10], "uv_size": [4, 3]},
+								"up": {"uv": [16, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [16, 10], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "mushroom5",
+					"parent": "mushrooms",
+					"pivot": [20, 0, 35],
+					"cubes": [
+						{
+							"origin": [19, 0, 34],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [1, 13], "uv_size": [2, 3]},
+								"east": {"uv": [1, 13], "uv_size": [2, 3]},
+								"south": {"uv": [1, 13], "uv_size": [2, 3]},
+								"west": {"uv": [1, 13], "uv_size": [2, 3]}
+							}
+						},
+						{
+							"origin": [18, 3, 33],
+							"size": [4, 3, 4],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [4, 3]},
+								"east": {"uv": [0, 10], "uv_size": [4, 3]},
+								"south": {"uv": [0, 10], "uv_size": [4, 3]},
+								"west": {"uv": [0, 10], "uv_size": [4, 3]},
+								"up": {"uv": [4, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 10], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_5",
+					"parent": "mushroom5",
+					"pivot": [20, 3, 35],
+					"cubes": [
+						{
+							"origin": [19, 0, 34],
+							"size": [2, 3, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [2, 3]},
+								"east": {"uv": [13, 13], "uv_size": [2, 3]},
+								"south": {"uv": [13, 13], "uv_size": [2, 3]},
+								"west": {"uv": [13, 13], "uv_size": [2, 3]}
+							}
+						},
+						{
+							"origin": [18, 3, 33],
+							"size": [4, 3, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [4, 3]},
+								"east": {"uv": [12, 10], "uv_size": [4, 3]},
+								"south": {"uv": [12, 10], "uv_size": [4, 3]},
+								"west": {"uv": [12, 10], "uv_size": [4, 3]},
+								"up": {"uv": [16, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [16, 10], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "mushroom6",
+					"parent": "mushrooms",
+					"pivot": [5, 0, 58],
+					"cubes": [
+						{
+							"origin": [4, 0, 57],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [1, 13], "uv_size": [2, 3]},
+								"east": {"uv": [1, 13], "uv_size": [2, 3]},
+								"south": {"uv": [1, 13], "uv_size": [2, 3]},
+								"west": {"uv": [1, 13], "uv_size": [2, 3]}
+							}
+						},
+						{
+							"origin": [3, 3, 56],
+							"size": [4, 3, 4],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [4, 3]},
+								"east": {"uv": [0, 10], "uv_size": [4, 3]},
+								"south": {"uv": [0, 10], "uv_size": [4, 3]},
+								"west": {"uv": [0, 10], "uv_size": [4, 3]},
+								"up": {"uv": [4, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 10], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_6",
+					"parent": "mushroom6",
+					"pivot": [5, 3, 58],
+					"cubes": [
+						{
+							"origin": [4, 0, 57],
+							"size": [2, 3, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [2, 3]},
+								"east": {"uv": [13, 13], "uv_size": [2, 3]},
+								"south": {"uv": [13, 13], "uv_size": [2, 3]},
+								"west": {"uv": [13, 13], "uv_size": [2, 3]}
+							}
+						},
+						{
+							"origin": [3, 3, 56],
+							"size": [4, 3, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [4, 3]},
+								"east": {"uv": [12, 10], "uv_size": [4, 3]},
+								"south": {"uv": [12, 10], "uv_size": [4, 3]},
+								"west": {"uv": [12, 10], "uv_size": [4, 3]},
+								"up": {"uv": [16, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [16, 10], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "mushroom7",
+					"parent": "mushrooms",
+					"pivot": [-18, 0, 66],
+					"cubes": [
+						{
+							"origin": [-19, 0, 65],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [1, 13], "uv_size": [2, 3]},
+								"east": {"uv": [1, 13], "uv_size": [2, 3]},
+								"south": {"uv": [1, 13], "uv_size": [2, 3]},
+								"west": {"uv": [1, 13], "uv_size": [2, 3]}
+							}
+						},
+						{
+							"origin": [-20, 3, 64],
+							"size": [4, 3, 4],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [4, 3]},
+								"east": {"uv": [0, 10], "uv_size": [4, 3]},
+								"south": {"uv": [0, 10], "uv_size": [4, 3]},
+								"west": {"uv": [0, 10], "uv_size": [4, 3]},
+								"up": {"uv": [4, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 10], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_7",
+					"parent": "mushroom7",
+					"pivot": [-18, 3, 66],
+					"cubes": [
+						{
+							"origin": [-19, 0, 65],
+							"size": [2, 3, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [2, 3]},
+								"east": {"uv": [13, 13], "uv_size": [2, 3]},
+								"south": {"uv": [13, 13], "uv_size": [2, 3]},
+								"west": {"uv": [13, 13], "uv_size": [2, 3]}
+							}
+						},
+						{
+							"origin": [-20, 3, 64],
+							"size": [4, 3, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [4, 3]},
+								"east": {"uv": [12, 10], "uv_size": [4, 3]},
+								"south": {"uv": [12, 10], "uv_size": [4, 3]},
+								"west": {"uv": [12, 10], "uv_size": [4, 3]},
+								"up": {"uv": [16, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [16, 10], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "mushroom8",
+					"parent": "mushrooms",
+					"pivot": [15, 0, 74],
+					"cubes": [
+						{
+							"origin": [14, 0, 73],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [1, 13], "uv_size": [2, 3]},
+								"east": {"uv": [1, 13], "uv_size": [2, 3]},
+								"south": {"uv": [1, 13], "uv_size": [2, 3]},
+								"west": {"uv": [1, 13], "uv_size": [2, 3]}
+							}
+						},
+						{
+							"origin": [13, 3, 72],
+							"size": [4, 3, 4],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [4, 3]},
+								"east": {"uv": [0, 10], "uv_size": [4, 3]},
+								"south": {"uv": [0, 10], "uv_size": [4, 3]},
+								"west": {"uv": [0, 10], "uv_size": [4, 3]},
+								"up": {"uv": [4, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 10], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_8",
+					"parent": "mushroom8",
+					"pivot": [15, 3, 74],
+					"cubes": [
+						{
+							"origin": [14, 0, 73],
+							"size": [2, 3, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [2, 3]},
+								"east": {"uv": [13, 13], "uv_size": [2, 3]},
+								"south": {"uv": [13, 13], "uv_size": [2, 3]},
+								"west": {"uv": [13, 13], "uv_size": [2, 3]}
+							}
+						},
+						{
+							"origin": [13, 3, 72],
+							"size": [4, 3, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [4, 3]},
+								"east": {"uv": [12, 10], "uv_size": [4, 3]},
+								"south": {"uv": [12, 10], "uv_size": [4, 3]},
+								"west": {"uv": [12, 10], "uv_size": [4, 3]},
+								"up": {"uv": [16, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [16, 10], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "sfx",
+					"parent": "mushrooms",
+					"pivot": [0, 0, 8],
+					"locators": {
+						"shimmer": [0, 4, 16],
+						"pop1": [-15, 4, 4],
+						"pop2": [14, 4, 11],
+						"pop3": [-4, 4, 21],
+						"pop4": [-22, 4, 39],
+						"pop5": [20, 4, 35],
+						"pop6": [5, 4, 58],
+						"pop7": [-18, 4, 66],
+						"pop8": [15, 4, 74]
+					}
+				}
+			]
+		}
+	]
+}

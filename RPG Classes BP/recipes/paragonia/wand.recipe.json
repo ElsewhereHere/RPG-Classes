@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "paragonia_classes:wand"
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+    },
+    "tags": ["paragonia_classes:rpg_crafting"],
+    "key": {
+      "/": {
+        "item": "minecraft:stick"
+      }
+    },
+    "pattern": [ 
+      " /",
+      "/ "],
+    "result": {
+      "item": "paragonia_classes:wand"
+    }
+  }
+}

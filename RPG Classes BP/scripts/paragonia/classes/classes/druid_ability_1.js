@@ -86,7 +86,7 @@ mc.system.runInterval(() => {
     }
 
     entangle.dimension.spawnParticle("paragonia_classes:druid_entangle", nextPos);
-    if (entangle.stepCount % 4 === 0) {
+    if (entangle.stepCount % 3 === 0) {
       entangle.dimension.playSound("paragonia_classes.druid_ability_1_cast", nextPos);
     }
 

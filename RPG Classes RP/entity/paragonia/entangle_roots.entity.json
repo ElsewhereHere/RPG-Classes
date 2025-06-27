@@ -14,8 +14,8 @@
         "default": "geometry.paragonia_classes.entangle_roots"
       },
       "sound_effects": {
-        "entangle_grow": "paragonia_classes.entangle_grow",
-        "entangle_shrink": "paragonia_classes.entangle_shrink"
+        "entangle_grow": "paragonia_classes.druid_ability_1_grow",
+        "entangle_shrink": "paragonia_classes.druid_ability_1_shrink"
       },
       //"particle_effects": {
         //"entangle_particle": "paragonia_classes:entangle"

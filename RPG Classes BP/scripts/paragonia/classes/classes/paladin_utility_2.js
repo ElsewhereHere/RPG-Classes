@@ -5,9 +5,21 @@ const STEP_INTERVAL = 0.8;
 const DETECTION_RADIUS = 1.25;
 
 const sanctifyConversions = {
-  "minecraft:rotten_flesh": { result: "minecraft:cooked_chicken", max: 5 },
-  "minecraft:magma_cream": { result: "minecraft:slime_ball", max: 5 },
+  "minecraft:rotten_flesh": { result: "minecraft:raw_chicken", max: 5 },
+  "minecraft:bone": { result: "minecraft:bone_meal", max: 5, resultCount: 5 },
   "minecraft:apple": { result: "minecraft:golden_apple", max: 1 },
+  "minecraft:gunpowder": { result: "minecraft:sugar", max: 5 },
+  "minecraft:redstone": { result: "minecraft:glowstone_dust", max: 10 },
+  "minecraft:iron_ingot": { result: "minecraft:gold_ingot", max: 2 },
+  "minecraft:iron_nugget": { result: "minecraft:gold_ingot", max: 16 },
+  "minecraft:magma_cream": { result: "minecraft:slime_ball", max: 5 },
+  "minecraft:eye_of_ender": { result: "minecraft:ender_pearl", max: 3 },
+  "minecraft:coal": { result: "minecraft:charcoal", max: 5, resultCount: 2 },
+  "minecraft:poisonous_potato": { result: "minecraft:potato", max: 10 },
+  "minecraft:wither_rose": { result: "minecraft:rose_bush", max: 5 },
+  "minecraft:crimson_fungus": { result: "minecraft:red_mushroom", max: 3 },
+  "minecraft:warped_fungus": { result: "minecraft:brown_mushroom", max: 3 },
+  "minecraft:pale_oak_sapling": { result: "minecraft:oak_sapling", max: 2 }
 };
 
 const activeSanctifies = new Map();
@@ -89,9 +101,10 @@ mc.system.runInterval(() => {
 
     // Spawn converted items
     scan.dimension.spawnItem(
-      new mc.ItemStack(conversion.result, convertCount),
-      pos
-    );
+  new mc.ItemStack(conversion.result, convertCount * (conversion.resultCount || 1)),
+  pos
+);
+
 
     // Respawn leftover source items, if any
     if (leftover > 0) {

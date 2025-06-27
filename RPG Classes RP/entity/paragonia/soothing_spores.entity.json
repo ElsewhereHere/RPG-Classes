@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "paragonia_classes:soothing_spores",
+      "materials": {
+        "default": "entity_alphatest",
+        "outline": "paragonia_classes_emissive_blend_additive"
+      },
+      "textures": {
+        "default": "textures/paragonia/classes/entity/soothing_spores"
+      },
+      "geometry": {
+        "default": "geometry.paragonia_classes.soothing_spores"
+      },
+      "sound_effects": {
+        "shimmer": "paragonia_classes.druid_ability_3",
+        "pop1": "paragonia_classes.druid_ability_3_mushroom1",
+        "pop2": "paragonia_classes.druid_ability_3_mushroom2",
+        "pop3": "paragonia_classes.druid_ability_3_mushroom3",
+        "pop4": "paragonia_classes.druid_ability_3_mushroom4",
+        "pop5": "paragonia_classes.druid_ability_3_mushroom5",
+        "pop6": "paragonia_classes.druid_ability_3_mushroom6",
+        "pop7": "paragonia_classes.druid_ability_3_mushroom7",
+        "pop8": "paragonia_classes.druid_ability_3_mushroom8"
+      },
+      "animations": {
+        "grow": "animation.paragonia_classes.soothing_spores.grow"
+      },
+      "scripts": {
+        "animate": ["grow"]
+      },
+      "render_controllers": ["controller.render.paragonia_classes.ability"]
+    }
+  }
+}

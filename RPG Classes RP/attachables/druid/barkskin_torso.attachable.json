@@ -14,8 +14,15 @@
       "geometry": {
         "default": "geometry.paragonia_classes.barkskin_torso"
       },
+      "particle_effects": {
+        "leaf": "paragonia_classes:druid_barkskin"
+      },
+      "animations": {
+        "leaves": "animation.paragonia_classes.barkskin.leaves"
+      },
       "scripts": {
-          "parent_setup": "v.chest_layer_visible = 0.0;"
+        "animate": ["leaves"],
+        "parent_setup": "v.chest_layer_visible = 0.0;"
       },
       "render_controllers": ["controller.render.armor"]
     }

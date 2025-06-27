@@ -33,6 +33,7 @@ import { Druidcraft } from "./classes/druid_utility_1.js";
 
 //Items
 import "./items/radiant_orb.js";
+import { Wand } from "./items/wand.js";
 
 
 //    ABILITY
@@ -630,6 +631,37 @@ mc.world.beforeEvents.itemUseOn.subscribe(event => {
   }
 });
 
+
+//    WEAPONS
+//-----------------
+
+// Weapon Definitions
+const weaponHandlers = {
+  "paragonia_classes:wand": {
+    class_name: "§aDruid",
+    handler: Wand,
+    tags: [
+      "paragonia_classes:class_druid",
+      "paragonia_classes:subclass_druid",
+    ],
+  },
+};
+
+// Handle Weapon Usage
+mc.world.afterEvents.itemUse.subscribe((event) => {
+  const player = event.source;
+  const item   = event.itemStack;
+  if (!item) return;
+
+  const data = weaponHandlers[item.typeId];
+  if (!data) return;
+
+  // invoke the Wand (or future Staff) handler
+  data.handler(player, item);
+
+  // prevent default (e.g. block placement)
+  event.cancel = true;
+});
 
 
 

@@ -351,6 +351,12 @@
 						"0.3": [-22.5, 0, -22.5]
 					}
 				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "entangle_grow",
+					"locator": "sfx"
+				}
 			}
 		},
 		"animation.entangle_roots.shrink": {
@@ -642,6 +648,12 @@
 						},
 						"0.3": [0, 0, 0]
 					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "entangle_shrink",
+					"locator": "sfx"
 				}
 			}
 		}

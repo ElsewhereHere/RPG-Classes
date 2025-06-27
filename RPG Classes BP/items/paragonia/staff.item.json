@@ -8,7 +8,6 @@
       }
     },
     "components": {
-      //"minecraft:custom_components": ["paragonia_classes:staff"],
       "minecraft:tags": {
         "tags": [
           "paragonia_classes:druid", 

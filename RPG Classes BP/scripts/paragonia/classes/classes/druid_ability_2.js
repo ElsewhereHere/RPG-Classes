@@ -43,6 +43,9 @@ export function Barkskin(player) {
   }
 
   player.playAnimation("animation.paragonia_classes.player.barkskin");
+  player.dimension.playSound("paragonia_classes.druid_ability_2_leaves", player.location);
+  player.dimension.playSound("paragonia_classes.druid_ability_2", player.location);
+  //player.dimension.spawnParticle("paragonia_classes:druid_barkskin", player.location );
 
   mc.system.runTimeout(() => {
     for (const [slot, itemId] of Object.entries(DRUID_ARMOR)) {

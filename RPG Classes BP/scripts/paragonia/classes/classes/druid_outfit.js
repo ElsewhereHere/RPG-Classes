@@ -12,7 +12,15 @@ const DRUID_FLOWER_BLOCKS = [
   "minecraft:pink_tulip",
   "minecraft:oxeye_daisy",
   "minecraft:cornflower",
-  "minecraft:lily_of_the_valley"
+  "minecraft:lily_of_the_valley",
+  "minecraft:sunflower",
+  "minecraft:lilac",
+  "minecraft:rose_bush",
+  "minecraft:peony",
+  "minecraft:pitcher_plant",
+  "minecraft:cactus_flower",
+  "minecraft:wildflowers",
+  "minecraft:torchflower"
 ];
 
 mc.world.afterEvents.worldInitialize.subscribe(() => {

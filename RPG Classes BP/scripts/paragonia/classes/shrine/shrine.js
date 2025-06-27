@@ -224,6 +224,7 @@ function showClassHubForm(player, block, currentClassTag) {
       const classInfoMap = {
         "paragonia_classes:class_barbarian": showClassInformationBarbarian,
         "paragonia_classes:class_paladin": showClassInformationPaladin,
+        "paragonia_classes:class_druid": showClassInformationDruid,
       };
 
       const handler = classInfoMap[currentClassTag];
@@ -450,7 +451,7 @@ The Paladin is a support class who combines melee combat with radiant magic, shi
     .button("Sacred Flame", "textures/paragonia/classes/items/ability_paladin_3.png")
     .button("Divine Ascension", "textures/paragonia/classes/items/ability_paladin_ult.png")
     .button("Cleanse", "textures/paragonia/classes/items/utility_paladin_1.png")
-    .button("Purify", "textures/paragonia/classes/items/utility_paladin_2.png")
+    .button("Sanctify", "textures/paragonia/classes/items/utility_paladin_2.png")
     .button("Radiant Orb", "textures/paragonia/classes/items/radiant_orb.png")
     .button("Undead Target Dummy", "textures/paragonia/classes/items/spawn_target_dummy_undead.png")
     .button("<== Back");
@@ -475,7 +476,7 @@ The Paladin is a support class who combines melee combat with radiant magic, shi
         showClassInformationPaladinCleanse(player, block, currentClassTag);
         break;
       case 5:
-        showClassInformationPaladinPurify(player, block, currentClassTag);
+        showClassInformationPaladinSanctify(player, block, currentClassTag);
         break;
       case 6:
         showClassInformationPaladinRadiantOrb(player, block, currentClassTag);
@@ -542,7 +543,7 @@ function showClassInformationPaladinDivineAscension(player, block, currentClassT
   const form = new ActionFormData()
     .title("Class Shrine")
     .body(`\n§eDivine Ascension\n
-§rRise into the air on a pillar of radiant light, then crash down with divine force at an accelerated speed.\n
+§rRise into the air on a pillar of radiant light, then crash down with divine force.\n
 §7Type: §rUltimate
 §7Target: §rSelf`)
     .button("<== Back");
@@ -550,6 +551,253 @@ function showClassInformationPaladinDivineAscension(player, block, currentClassT
   form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationPaladin(player, block, currentClassTag); }
   });
 }
+
+//Cleanse
+function showClassInformationPaladinCleanse(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§eCleanse\n
+§rRemove one negative effect from yourself and a targeted ally.\n
+§7Type: §rUtility
+§7Cooldown: §r60s`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationPaladin(player, block, currentClassTag); }
+  });
+}
+
+//Sanctify
+function showClassInformationPaladinSanctify(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§eCleanse\n
+§rTransmute cursed or negative items on the ground into their beneficial forms.\n
+Rotten Flesh --> Raw Chicken
+Bone --> Bone Meal (x5)
+Apple --> Golden Apple
+Gunpowder --> Sugar
+Redstone Dust --> Glowstone Dust
+Iron Ingot --> Gold Ingot
+Iron Nugget --> Gold Nugget
+Magma Cream --> Slime Ball
+Eye of Ender --> Ender Pearl
+Coal --> Charcoal (x2)
+Poisonouse Potato --> Potato
+Wither Rose --> Rose Bush
+Crimson Fungus --> Red Mushroom
+Warped Fungus --> Brown Mushroom
+Pale Oak Sapling --> Oak Sapling\n
+§7Type: §rUtility
+§7Cooldown: §r60s`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationPaladin(player, block, currentClassTag); }
+  });
+}
+
+//Radiant Orb
+function showClassInformationPaladinRadiantOrb(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§eRadiant Orb\n
+§rConjure a luminous orb that radiates bright light, illuminating the area around it.\n
+§7Type: §rItem`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationPaladin(player, block, currentClassTag); }
+  });
+}
+
+//Undead Target Dummy
+function showClassInformationPaladinUndeadTargetDummy(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§eUndead Target Dummy\n
+§rA durable practice dummy - perfect for testing abilities effective against Undead.\n
+§7Type: §rItem`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationPaladin(player, block, currentClassTag); }
+  });
+}
+
+
+//          DRUID
+
+function showClassInformationDruid(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§aDruid§r\n
+The Druid is a nature-wielding spellcaster who harnesses the power of plants and animals to heal, hinder, and thrive in harmony with the wild.
+§8-------------------------------\n
+§7Weapon Proficiencies: §rWand, Staff\n
+§7Barbarian Outfit: §rGrants Regeneration while near flowers\n\n`)
+    .button("Entangle", "textures/paragonia/classes/items/ability_druid_1.png")
+    .button("Barkskin", "textures/paragonia/classes/items/ability_druid_2.png")
+    .button("Soothing Spores", "textures/paragonia/classes/items/ability_druid_3.png")
+    .button("Wild Shape", "textures/paragonia/classes/items/ability_druid_ult.png")
+    .button("Druidcraft", "textures/paragonia/classes/items/utility_druid_1.png")
+    .button("Speak With Animals", "textures/paragonia/classes/items/utility_druid_2.png")
+    .button("Healing Salve", "textures/paragonia/classes/items/healing_salve.png")
+    .button("Firefly Lamp", "textures/paragonia/classes/items/firefly_lamp.png")
+    .button("<== Back");
+
+  form.show(player).then((response) => {
+    if (response.canceled) return;
+
+    switch (response.selection) {
+      case 0:
+        showClassInformationDruidEntangle(player, block, currentClassTag);
+        break;
+      case 1:
+        showClassInformationDruidBarkskin(player, block, currentClassTag);
+        break;
+      case 2:
+        showClassInformationDruidSoothingSpores(player, block, currentClassTag);
+        break;
+      case 3:
+        showClassInformationDruidWildShape(player, block, currentClassTag);
+        break;
+      case 4:
+        showClassInformationDruidDruidcraft(player, block, currentClassTag);
+        break;
+      case 5:
+        showClassInformationDruidSpeakWithAnimals(player, block, currentClassTag);
+        break;
+      case 6:
+        showClassInformationDruidHealingSalve(player, block, currentClassTag);
+        break;
+      case 7:
+        showClassInformationDruidFireflyLamp(player, block, currentClassTag);
+        break;
+      case 8:
+        const updatedClassTag = getPlayerClassTag(player);
+        const updatedSubclassTag = getPlayerSubclassTag(player);
+        showClassHubForm(player, block, updatedClassTag, updatedSubclassTag);
+        break;
+
+    }
+  });
+}
+
+//Entangle
+function showClassInformationDruidEntangle(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§aEntangle\n
+§rRoots erupt from the ground, snaring an enemy's feet, rendering them immobile for 3 seconds.\n
+§7Type: §rAbility
+§7Target: §rOther
+§7Cooldown: §r8s`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationDruid(player, block, currentClassTag); }
+  });
+}
+
+//Barkskin
+function showClassInformationDruidBarkskin(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§aBarkskin\n
+§rIf wearing the full Druid Outfit, grow protective bark armor for 5 seconds, reducing incoming damage as nature shields you.\n
+§7Type: §rAbility
+§7Target: §rSelf
+§7Cooldown: §r15s`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationDruid(player, block, currentClassTag); }
+  });
+}
+
+//Soothing Spore
+function showClassInformationDruidSoothingSpores(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§aSoothing Spores\n
+§rMushrooms sprout up in a 3x5 area, releasing gentle spores that heal creatures they touch and grant Regeneration II for 3 seconds.\n
+§7Type: §rAbility
+§7Target: §rAOE
+§7Cooldown: §r12s`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationDruid(player, block, currentClassTag); }
+  });
+}
+
+//Wild Shape
+function showClassInformationDruidWildShape(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§aWild Shape\n
+§rTransform into a powerful Bear for 10 seconds, gaining Resistance and Speed. 
+While transformed, this ability becomes §aClaw Slash§r, allowing you to swipe your claws at enemies in front of you, dealing AOE damage.\n
+§7Type: §rUltimate
+§7Target: §rSelf`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationDruid(player, block, currentClassTag); }
+  });
+}
+
+//Druidcraft
+function showClassInformationDruidDruidcraft(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§aDruidcraft\n
+§rChannel your Druidic nature magic to instantly grow all crops within a 3x3 area to full maturity.\n
+§7Type: §rUtility
+§7Cooldown: §r60s`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationDruid(player, block, currentClassTag); }
+  });
+}
+
+//Speak With Animals
+function showClassInformationDruidSpeakWithAnimals(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§aSpeak With Animals\n
+§rGive an affectionate pet to an animal, and gain the ability to understand what it's saying.\n
+§7Type: §rUtility
+§7Cooldown: §r60s`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationDruid(player, block, currentClassTag); }
+  });
+}
+
+//Healing Salve
+function showClassInformationDruidHealingSalve(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§aHealing Salve\n
+§rA soothing herbal remedy - consume to immediately restore 2 health and gain an effect based on the mushroom used to craft it.\n
+Red Mushroom = Regeneration
+Brown Mushroom = Saturation
+Crimson Fungus = Fire Resistance
+Warped Fungus = Haste\n
+§7Type: §rItem`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationDruid(player, block, currentClassTag); }
+  });
+}
+
+//Firefly Lamp
+function showClassInformationDruidFireflyLamp(player, block, currentClassTag) {
+  const form = new ActionFormData()
+    .title("Class Shrine")
+    .body(`\n§aFirefly Lamp\n
+§rA swarm of captured fireflies that emits a gentle, dynamic light - can be held in the offhand.\n
+§7Type: §rItem`)
+    .button("<== Back");
+
+  form.show(player).then((response) => { if (response.canceled) return; if (response.selection === 0) { showClassInformationDruid(player, block, currentClassTag); }
+  });
+}
+
 
 
 //     PARTICLE SPAWNING
