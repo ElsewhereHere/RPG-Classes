@@ -3,7 +3,7 @@ import * as mc from "@minecraft/server";
 const FLAME_SPEED = 2;
 const MAX_DISTANCE = 30;
 const STEP_INTERVAL = 1;
-const HIT_RADIUS = 1.85;
+//const HIT_RADIUS = 1.85;
 
 const activeFlames = new Map();
 
@@ -23,7 +23,7 @@ export function SacredFlame(player) {
     distance: 0,
     dimension: player.dimension,
     playerId: player.id,
-    stepCount: 0
+    stepCount: 0,
   });
 }
 
@@ -42,34 +42,40 @@ mc.system.runInterval(() => {
 
     const blockHit = flame.dimension.getBlock(nextPos);
     if (blockHit && !blockHit.isAir) {
-      flame.dimension.spawnParticle("paragonia_classes:paladin_sacred_flame", nextPos);
+      flame.dimension.spawnParticle(
+        "paragonia_classes:paladin_sacred_flame",
+        nextPos
+      );
       activeFlames.delete(id);
       continue;
     }
 
-    const entities = flame.dimension.getEntities({
-      location: nextPos,
-      maxDistance: HIT_RADIUS,
+    // Raycast against entity hitboxes for this segment
+    const hits = flame.dimension.getEntitiesFromRay(flame.pos, flame.dir, {
+      maxDistance: FLAME_SPEED,
+      excludeTypes: ["minecraft:item"],
     });
 
-    const hit = entities.find(e => e.id !== id && e.id !== undefined && e.typeId !== "minecraft:item");
-
-    if (hit) {
+    // Find the first non‐shooter hit
+    const hitResult = hits.find((h) => h.entity.id !== flame.playerId);
+    if (hitResult) {
+      const target = hitResult.entity;
       try {
-        const player = mc.world.getPlayers().find(p => p.id === flame.playerId);
-        //player?.sendMessage(`§e[Debug] Hit entity: §f${hit.typeId}`);
+        target.applyDamage(6);
+        target.addEffect("blindness", 60, {
+          amplifier: 0,
+          showParticles: true,
+        });
 
-        hit.applyDamage(6);
-        hit.addEffect("blindness", 60, { amplifier: 0, showParticles: true });
-
-        const effects = hit.getEffects();
-        if (effects.find(e => e.typeId === "invisibility")) {
-          hit.removeEffect("invisibility");
+        const effects = target.getEffects();
+        if (effects.find((e) => e.typeId === "invisibility")) {
+          target.removeEffect("invisibility");
         }
 
-        //flame.dimension.spawnParticle("paragonia_classes:paladin_radiant_orb_glow", nextPos);
-        flame.dimension.playSound("paragonia_classes.paladin_ability_3_impact", nextPos);
-
+        flame.dimension.playSound(
+          "paragonia_classes.paladin_ability_3_impact",
+          flame.pos
+        );
       } catch (err) {
         //console.warn("Sacred Flame hit error:", err);
       }
@@ -78,7 +84,10 @@ mc.system.runInterval(() => {
       continue;
     }
 
-    flame.dimension.spawnParticle("paragonia_classes:paladin_sacred_flame", nextPos);
+    flame.dimension.spawnParticle(
+      "paragonia_classes:paladin_sacred_flame",
+      nextPos
+    );
     if (flame.stepCount % 2 === 0) {
       flame.dimension.playSound("paragonia_classes.paladin_ability_3", nextPos);
     }

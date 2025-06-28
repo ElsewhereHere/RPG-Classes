@@ -639,7 +639,7 @@ The Druid is a nature-wielding spellcaster who harnesses the power of plants and
     .button("Druidcraft", "textures/paragonia/classes/items/utility_druid_1.png")
     .button("Speak With Animals", "textures/paragonia/classes/items/utility_druid_2.png")
     .button("Healing Salve", "textures/paragonia/classes/items/healing_salve.png")
-    .button("Firefly Lamp", "textures/paragonia/classes/items/firefly_lamp.png")
+    .button("Firefly Lantern", "textures/paragonia/classes/items/firefly_lamp.png")
     .button("<== Back");
 
   form.show(player).then((response) => {
@@ -668,7 +668,7 @@ The Druid is a nature-wielding spellcaster who harnesses the power of plants and
         showClassInformationDruidHealingSalve(player, block, currentClassTag);
         break;
       case 7:
-        showClassInformationDruidFireflyLamp(player, block, currentClassTag);
+        showClassInformationDruidFireflyLantern(player, block, currentClassTag);
         break;
       case 8:
         const updatedClassTag = getPlayerClassTag(player);
@@ -730,7 +730,7 @@ function showClassInformationDruidWildShape(player, block, currentClassTag) {
   const form = new ActionFormData()
     .title("Class Shrine")
     .body(`\n§aWild Shape\n
-§rTransform into a powerful Bear for 10 seconds, gaining Resistance and Speed. 
+§rTransform into a powerful Bear for 10 seconds, gaining Health Boost and Speed II. 
 While transformed, this ability becomes §aClaw Slash§r, allowing you to swipe your claws at enemies in front of you, dealing AOE damage.\n
 §7Type: §rUltimate
 §7Target: §rSelf`)
@@ -775,7 +775,7 @@ function showClassInformationDruidHealingSalve(player, block, currentClassTag) {
     .body(`\n§aHealing Salve\n
 §rA soothing herbal remedy - consume to immediately restore 2 health and gain an effect based on the mushroom used to craft it.\n
 Red Mushroom = Regeneration
-Brown Mushroom = Saturation
+Brown Mushroom = Resistance
 Crimson Fungus = Fire Resistance
 Warped Fungus = Haste\n
 §7Type: §rItem`)
@@ -785,8 +785,8 @@ Warped Fungus = Haste\n
   });
 }
 
-//Firefly Lamp
-function showClassInformationDruidFireflyLamp(player, block, currentClassTag) {
+//Firefly Lantern
+function showClassInformationDruidFireflyLantern(player, block, currentClassTag) {
   const form = new ActionFormData()
     .title("Class Shrine")
     .body(`\n§aFirefly Lamp\n
@@ -805,7 +805,7 @@ function showClassInformationDruidFireflyLamp(player, block, currentClassTag) {
 
 let hasStartedInterval = false;
 
-world.afterEvents.playerJoin.subscribe(() => {
+world.afterEvents.playerSpawn.subscribe(() => {
   if (hasStartedInterval) return;
   hasStartedInterval = true;
 

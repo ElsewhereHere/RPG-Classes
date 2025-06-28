@@ -21,6 +21,7 @@
         },
         "max_durability": 128
       },
+      "minecraft:hand_equipped": true,
       "minecraft:can_destroy_in_creative": false,
       "minecraft:icon": "paragonia_classes_wand",
       "minecraft:max_stack_size": 1,

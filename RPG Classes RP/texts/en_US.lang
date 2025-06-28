@@ -83,6 +83,13 @@ item.paragonia_classes:barkskin_torso=Barkskin
 item.paragonia_classes:barkskin_legs=Barkskin
 item.paragonia_classes:barkskin_feet=Barkskin
 
+item.paragonia_classes:healing_salve=Healing Salve
+item.paragonia_classes:healing_salve_red=Healing Salve (Red Mushroom)
+item.paragonia_classes:healing_salve_brown=Healing Salve (Brown Mushroom)
+item.paragonia_classes:healing_salve_crimson=Healing Salve (Crimson Fungus)
+item.paragonia_classes:healing_salve_warped=Healing Salve (Warped Fungus)
+item.paragonia_classes:firefly_lantern=Firefly Lantern
+
 
 ## Ranger
 item.paragonia_classes:ranger_cowl=Ranger Cowl

@@ -1,0 +1,30 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "paragonia_classes:healing_salve_brown"
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+    },
+    "tags": ["paragonia_classes:rpg_crafting"],
+    "ingredients": [
+      {
+        "item": "minecraft:kelp",
+        "count": 1
+      },
+      {
+        "item": "minecraft:paper",
+        "count": 1
+      },
+      {
+        "item": "minecraft:brown_mushroom",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "paragonia_classes:healing_salve_brown",
+      "count": 1
+    }
+  }
+}

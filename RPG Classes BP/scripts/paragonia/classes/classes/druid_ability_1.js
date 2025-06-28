@@ -2,7 +2,7 @@ import * as mc from "@minecraft/server";
 
 const ENTANGLE_SPEED = 1;
 const MAX_DISTANCE = 25;
-const HIT_RADIUS = 1.5;
+//const HIT_RADIUS = 1.5;
 const STEP_INTERVAL = 1;
 
 const activeEntangles = new Map();
@@ -49,16 +49,23 @@ mc.system.runInterval(() => {
       return;
     }
 
-    const entities = entangle.dimension.getEntities({
-      location: nextPos,
-      maxDistance: HIT_RADIUS,
-    });
+    // Raycast against entity hitboxes for this segment
+    const hits = entangle.dimension.getEntitiesFromRay(
+      entangle.pos,
+      entangle.dir,
+      {
+        maxDistance: ENTANGLE_SPEED,
+        excludeTypes: ["minecraft:item"],
+      }
+    );
 
-    const target = entities.find(e => e.id !== id && e.typeId !== "minecraft:item");
-
-    if (target) {
+    const hitResult = hits.find((h) => h.entity.id !== id);
+    if (hitResult) {
+      const target = hitResult.entity;
       try {
-        const player = mc.world.getPlayers().find(p => p.id === entangle.playerId);
+        const player = mc.world
+          .getPlayers()
+          .find((p) => p.id === entangle.playerId);
         const targetPos = target.location;
         const spawnPos = {
           x: Math.floor(targetPos.x) + 0.5,
@@ -68,16 +75,27 @@ mc.system.runInterval(() => {
 
         //player?.sendMessage(`§7[DEBUG] Attempting to spawn entangle_roots at ${spawnPos.x.toFixed(1)}, ${spawnPos.y.toFixed(1)}, ${spawnPos.z.toFixed(1)}`);
 
-        const ent = entangle.dimension.spawnEntity("paragonia_classes:entangle_roots", spawnPos);
+        const ent = entangle.dimension.spawnEntity(
+          "paragonia_classes:entangle_roots",
+          spawnPos
+        );
         if (!ent) {
           //player?.sendMessage("§c[DEBUG] Failed to spawn entangle_roots");
         }
 
-        target.addEffect("slowness", 40, { amplifier: 10, showParticles: false });
+        target.addEffect("slowness", 40, {
+          amplifier: 10,
+          showParticles: false,
+        });
 
-        entangle.dimension.playSound("paragonia_classes.druid_ability_1_impact", targetPos);
+        entangle.dimension.playSound(
+          "paragonia_classes.druid_ability_1_impact",
+          targetPos
+        );
       } catch (err) {
-        const player = mc.world.getPlayers().find(p => p.id === entangle.playerId);
+        const player = mc.world
+          .getPlayers()
+          .find((p) => p.id === entangle.playerId);
         //player?.sendMessage(`§c[DEBUG] Entangle error: ${err}`);
       }
 
@@ -85,9 +103,15 @@ mc.system.runInterval(() => {
       return;
     }
 
-    entangle.dimension.spawnParticle("paragonia_classes:druid_entangle", nextPos);
+    entangle.dimension.spawnParticle(
+      "paragonia_classes:druid_entangle",
+      nextPos
+    );
     if (entangle.stepCount % 3 === 0) {
-      entangle.dimension.playSound("paragonia_classes.druid_ability_1_cast", nextPos);
+      entangle.dimension.playSound(
+        "paragonia_classes.druid_ability_1_cast",
+        nextPos
+      );
     }
 
     entangle.pos = nextPos;

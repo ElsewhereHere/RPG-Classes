@@ -35,6 +35,7 @@ export function SoothingSpores(player) {
     healthComp.setCurrentValue(Math.min(curr + 5, max));
   }
   player.addEffect("minecraft:regeneration", 60, { amplifier: 1, showParticles: false });
+  player.playAnimation("animation.paragonia_classes.player.soothing_spores");
 
   // delayed area particles/heal/buff
   for (let row = 1; row <= 5; row++) {
@@ -47,7 +48,6 @@ export function SoothingSpores(player) {
 
       system.runTimeout(() => {
         dimension.spawnParticle("paragonia_classes:druid_soothing_spores", pos);
-        player.playAnimation("animation.paragonia_classes.player.soothing_spores");
 
         const nearby = dimension.getEntities({ location: pos, maxDistance: 1.5 });
         for (const ent of nearby) {

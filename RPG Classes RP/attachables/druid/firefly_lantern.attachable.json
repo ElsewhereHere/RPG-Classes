@@ -1,0 +1,42 @@
+{
+  "format_version": "1.19.80",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "paragonia_classes:firefly_lantern",
+      "materials": {
+        "default": "entity_alphatest",
+        "outline": "paragonia_classes_emissive_blend_additive"
+      },
+      "textures": {
+        "default": "textures/paragonia/classes/attachables/firefly_lantern"
+      },
+      "geometry": {
+        "default": "geometry.paragonia_classes.firefly_lantern"
+      },
+      /*"particle_effects": {
+        "particle": "paragonia_classes:druid_ability_1"
+      },*/
+      /*"sound_effects": {
+        "idle": "paragonia_classes.druid_ability_1_idle",
+        "cast": "paragonia_classes.druid_ability_1_cast"
+      },*/
+      "animations": {
+        "hold_first_person": "animation.attachable_display.item_hold_first_person",
+        "hold_third_person": "animation.attachable_display.item_hold_third_person",
+        "hold_first_person_offhand": "animation.attachable_display.item_hold_first_person_offhand",
+        "hold_third_person_offhand": "animation.attachable_display.item_hold_third_person_offhand",
+        "idle": "animation.paragonia_classes.firefly_lantern.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle",
+          { "hold_first_person": "context.is_first_person == 1.0 && context.item_slot == 'main_hand' " },
+          { "hold_third_person": "context.is_first_person == 0.0 && context.item_slot == 'main_hand' " },
+          {"hold_first_person_offhand": "context.is_first_person == 1.0 && context.item_slot == 'off_hand' " },
+          {"hold_third_person_offhand": "context.is_first_person == 0.0 && context.item_slot == 'off_hand' " }
+        ]
+      },
+      "render_controllers": ["controller.render.paragonia_classes.ability"]
+    }
+  }
+}

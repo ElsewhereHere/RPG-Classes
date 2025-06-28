@@ -23,10 +23,12 @@ export function WildShape(player) {
 
   // Add transformation tag
   player.addTag("paragonia_classes:is_wild_shape");
+  player.playAnimation("animation.paragonia_classes.player.wild_shape");
 
-  // Apply Speed I and Resistance I for 10 seconds
-  player.addEffect("resistance", 200, { amplifier: 0, showParticles: false });
-  player.addEffect("speed", 200, { amplifier: 0, showParticles: false });
+  // Apply Speed II and Health Boost II for 10 seconds
+  player.addEffect("health_boost", 200, { amplifier: 2, showParticles: false });
+  player.addEffect("instant_health", 1, { amplifier: 2, showParticles: false });
+  player.addEffect("speed", 200, { amplifier: 1, showParticles: false });
 
   // Replace the item in the used slot with the alternate version and lock it
   const bearItem = new mc.ItemStack("paragonia_classes:ability_druid_ult_alt", 1);

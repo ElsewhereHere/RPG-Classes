@@ -34,6 +34,8 @@ import { Druidcraft } from "./classes/druid_utility_1.js";
 //Items
 import "./items/radiant_orb.js";
 import { Wand } from "./items/wand.js";
+import "./items/healing_salve.js";
+import "./items/firefly_lantern.js";
 
 
 //    ABILITY

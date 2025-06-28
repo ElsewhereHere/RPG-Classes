@@ -1,0 +1,31 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:item": {
+    "description": {
+      "identifier": "paragonia_classes:healing_salve",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:tags": {
+        "tags": [
+          "paragonia_classes:druid"
+        ]
+      },
+      "minecraft:food": {
+        "can_always_eat": true,
+        "nutrition": 0,
+        "saturation_modifier": 0.1
+      },
+      "minecraft:use_modifiers": {
+        "movement_modifier": 0.85,
+        "use_duration": 1
+      },
+      "minecraft:use_animation": "eat",
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:icon": "paragonia_classes_healing_salve",
+      "minecraft:max_stack_size": 16
+    }
+  }
+}

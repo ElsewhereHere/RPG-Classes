@@ -28,7 +28,7 @@
         "triggers": [
           {
             "cause": "all",
-            "deals_damage": "yes"
+            "deals_damage": "no"
           }
         ]
       },

@@ -8,7 +8,13 @@
       "sounds": [
         { "name": "sounds/paragonia/classes/wand_cast_1", "volume": 0.85, "pitch": 1 },
         { "name": "sounds/paragonia/classes/wand_cast_2", "volume": 0.85, "pitch": 1 },
-        { "name": "sounds/paragonia/classes/wand_cast_3", "volume": 0.85, "pitch": 1 }
+        { "name": "sounds/paragonia/classes/wand_cast_3", "volume": 0.85, "pitch": 1 },
+        { "name": "sounds/paragonia/classes/wand_cast_1", "volume": 0.85, "pitch": 1.1 },
+        { "name": "sounds/paragonia/classes/wand_cast_2", "volume": 0.85, "pitch": 1.1 },
+        { "name": "sounds/paragonia/classes/wand_cast_3", "volume": 0.85, "pitch": 1.1 },
+        { "name": "sounds/paragonia/classes/wand_cast_1", "volume": 0.85, "pitch": 0.9 },
+        { "name": "sounds/paragonia/classes/wand_cast_2", "volume": 0.85, "pitch": 0.9 },
+        { "name": "sounds/paragonia/classes/wand_cast_3", "volume": 0.85, "pitch": 0.9 }
       ]
     },
 
