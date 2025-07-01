@@ -24,6 +24,34 @@ export function WildShape(player) {
   // Add transformation tag
   player.addTag("paragonia_classes:is_wild_shape");
   player.playAnimation("animation.paragonia_classes.player.wild_shape");
+  player.dimension.playSound("paragonia_classes.druid_ability_ult", player.location);
+
+  // Add Rider
+// 1) After playing the animation & sound, schedule the rider add:
+mc.system.runTimeout(() => {
+  const center = player.location;
+
+  player.dimension.spawnParticle("paragonia_classes:druid_wild_shape", player.location);
+
+  // Spawn custom rider entity on the player
+  const riderEntity = player.dimension.spawnEntity("paragonia_classes:wild_shape",center);
+  if (!riderEntity) {
+    console.error("Failed to spawn custom rider entity.");
+    return;
+  }
+
+  // Attach it as a rider
+  const rideable = player.getComponent("rideable");
+  if (!rideable || typeof rideable.addRider !== "function") {
+    console.error("Player does not have a rideable component or addRider is not a function.");
+    return;
+  }
+  const result = rideable.addRider(riderEntity);
+  if (!result) {
+    console.warn("Failed to add the custom entity as a rider.");
+  }
+}, 25);
+
 
   // Apply Speed II and Health Boost II for 10 seconds
   player.addEffect("health_boost", 200, { amplifier: 2, showParticles: false });
@@ -69,6 +97,8 @@ export function ClawSlash(player) {
     maxDistance: 2.5,
   });
 
+  player.dimension.playSound("paragonia_classes.druid_ability_ult_alt_growl", player.location);
+
   const target = entities.find(e => e.id !== player.id && e.hasComponent("minecraft:health"));
   if (!target) {
     //player.sendMessage("§7[ClawSlash] No entity hit.");
@@ -79,6 +109,16 @@ export function ClawSlash(player) {
 
   // Primary hit damage
   target.applyDamage(CLAW_DIRECT_DAMAGE);
+  
+  const loc = player.location;
+  const dx = target.location.x - loc.x;
+    const dz = target.location.z - loc.z;
+    const dist = Math.sqrt(dx * dx + dz * dz) || 1;
+  try {
+        target.applyKnockback(dx / dist, dz / dist, 2, 0.25);
+      } catch (e) {
+        //player.sendMessage(`§7[RPG Classes] §rCannot knock back ${ent.typeId}`);
+      }
 
   // Splash damage around the target
   const splashCenter = target.location;
@@ -87,10 +127,38 @@ export function ClawSlash(player) {
     maxDistance: CLAW_SPLASH_RADIUS,
   });
 
+  player.dimension.spawnParticle("paragonia_classes:druid_claw_slash", splashCenter);
+  player.dimension.playSound("paragonia_classes.druid_ability_ult_alt", splashCenter);
+
   for (const entity of splashEntities) {
     if (entity.id !== target.id && entity.id !== player.id && entity.hasComponent("minecraft:health")) {
       entity.applyDamage(CLAW_SPLASH_DAMAGE);
+      try {
+        entity.applyKnockback(dx / dist, dz / dist, 2, 0.25);
+      } catch (e) {
+        //player.sendMessage(`§7[RPG Classes] §rCannot knock back ${ent.typeId}`);
+      }
     }
   }
 }
 
+// On respawn/join, fix any lingering ult-alt items and clear the wild-shape tag
+mc.world.afterEvents.playerSpawn.subscribe(({ player, isFirstSpawn }) => {
+  const inventory = player.getComponent("minecraft:inventory")?.container;
+  if (!inventory) return;
+
+  // Scan every slot in their hotbar/inventory
+  for (let i = 0; i < inventory.size; i++) {
+    const item = inventory.getItem(i);
+    if (item?.typeId === "paragonia_classes:ability_druid_ult_alt") {
+      // Replace alt back to the real ultimate item
+      const orig = new mc.ItemStack("paragonia_classes:ability_druid_ult", 1);
+      inventory.setItem(i, orig);
+    }
+  }
+
+  // Remove the lingering wild-shape tag if present
+  if (player.hasTag("paragonia_classes:is_wild_shape")) {
+    player.removeTag("paragonia_classes:is_wild_shape");
+  }
+});

@@ -2,10 +2,18 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "paragonia_classes:druid_particle",
+			"identifier": "paragonia_classes:druid_ability_3",
 			"basic_render_parameters": {
 				"material": "particles_add",
 				"texture": "textures/paragonia/classes/particles/druid_particles"
+			}
+		},
+		"events": {
+			"glow": {
+				"particle_effect": {
+					"effect": "paragonia_classes:druid_glow",
+					"type": "emitter"
+				}
 			}
 		},
 		"components": {

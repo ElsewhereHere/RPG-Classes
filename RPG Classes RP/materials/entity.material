@@ -8,13 +8,13 @@
     },
 
 	"paragonia_classes_emissive_blend:entity_alphablend": {
-      "+defines": ["USE_EMISSIVE"],
-      "+states": ["Blending","DisableCulling"]
+      "+states": ["DisableCulling"],
+      "+defines": ["USE_EMISSIVE"]
     },
     
-  "paragonia_classes_emissive_blend_additive:entity_alphablend": {
-      "+defines": ["USE_EMISSIVE"],
-      "+states": ["Blending","DisableCulling"],
+  "paragonia_classes_emissive_blend_additive:paragonia_classes_emissive_blend": {
+      "-states": ["DisableCulling"],
+      "+states": ["InvertCulling"],
 
       "blendSrc":  "SourceAlpha",
       "blendDst":  "One"

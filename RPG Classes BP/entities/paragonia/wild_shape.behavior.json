@@ -1,0 +1,91 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "paragonia_classes:wild_shape",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      //Despawn Component Group
+      "paragonia:instant_despawn": { "minecraft:instant_despawn": {} },
+
+      //Despawn Timer Component Group
+      "paragonia:despawn_timer": {
+        "minecraft:timer": {
+          "time": 8.5,
+          "looping": true,
+          "time_down_event": {
+            "event": "paragonia:despawn",
+            "target": "self"
+          }
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:type_family": {
+        "family": ["parrot_tame"]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": "no"
+        }
+      },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "width": 1,
+            "height": 0.2,
+            "pivot": [0, 0.1, 0]
+          }
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.01,
+        "height": 0.01
+      },
+      "minecraft:persistent": {},
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:nameable": {
+        "always_show": false,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false,
+        "push_towards_closest_space": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:health": {
+        "value": 1,
+        "max": 1,
+        "min": 1
+      }
+    },
+
+    "events": {
+      //Despawn Event
+      "paragonia:despawn": {
+        "add": { "component_groups": ["paragonia:instant_despawn"] }
+      },
+      //Despawn Timer Event
+      "paragonia:despawn_timer": {
+        "add": { "component_groups": ["paragonia:despawn_timer"] }
+      },
+      //On Entity Spawn Event
+      "minecraft:entity_spawned": {
+        "add": { "component_groups": ["paragonia:despawn_timer"] }
+      }
+    }
+  }
+}

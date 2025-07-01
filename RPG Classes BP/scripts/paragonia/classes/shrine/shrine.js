@@ -700,7 +700,7 @@ function showClassInformationDruidBarkskin(player, block, currentClassTag) {
   const form = new ActionFormData()
     .title("Class Shrine")
     .body(`\n§aBarkskin\n
-§rIf wearing the full Druid Outfit, grow protective bark armor for 5 seconds, reducing incoming damage as nature shields you.\n
+§rIncrease your Wand and Staff damage, and if wearing the full Druid Outfit, grow protective bark armor for 5 seconds, reducing incoming damage as nature shields you.\n
 §7Type: §rAbility
 §7Target: §rSelf
 §7Cooldown: §r15s`)

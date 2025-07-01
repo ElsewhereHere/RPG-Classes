@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "paragonia_classes:wild_shape",
+      "materials": {
+        "default": "entity_alphatest",
+        "outline": "paragonia_classes_emissive_blend_additive"
+      },
+      "textures": {
+        "default": "textures/paragonia/classes/entity/wild_shape"
+      },
+      "geometry": {
+        "default": "geometry.paragonia_classes.wild_shape"
+      },
+      "animations": {
+        "controller": "controller.animation.paragonia_classes.wild_shape",
+        "spawn": "animation.paragonia_classes.ability.wild_shape_spawn",
+        "idle": "animation.paragonia_classes.ability.wild_shape_idle",
+        "walk": "animation.paragonia_classes.ability.wild_shape_walk",
+        "run": "animation.paragonia_classes.ability.wild_shape_run"
+      },
+      "scripts": {
+        "animate": ["controller"]
+      },
+      "render_controllers": ["controller.render.paragonia_classes.ability"]
+    }
+  }
+}

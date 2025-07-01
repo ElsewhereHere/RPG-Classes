@@ -1,0 +1,40 @@
+{
+  "format_version": "1.19.80",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "paragonia_classes:ability_druid_ult_alt",
+      "materials": {
+        "default": "paragonia_classes_emissive_blend",
+        "outline": "paragonia_classes_emissive_blend_additive"
+      },
+      "textures": {
+        "default": "textures/paragonia/classes/attachables/ability_druid_ult_alt"
+      },
+      "geometry": {
+        "default": "geometry.paragonia_classes.ability_druid_ult_alt"
+      },
+      "sound_effects": {
+        "idle": "paragonia_classes.druid_ability_ult_alt_idle",
+        "cast": "paragonia_classes.druid_ability_ult_alt_cast"
+      },
+      "animations": {
+        "controller": "controller.animation.paragonia_classes.druid_ability_ult_alt",
+        "hold_first_person": "animation.attachable_display.hold_first_person",
+        "hold_third_person": "animation.attachable_display.ability_hold_third_person",
+        "idle": "animation.ability.druid_ult_alt_idle",
+        "cast": "animation.ability.druid_ult_alt_cast",
+        "glow": "animation.ability.glow",
+        "cooldown": "animation.ability.cooldown"
+      },
+      "scripts": {
+        "animate": [
+          "controller",
+          "glow",
+          { "hold_first_person": "context.is_first_person == 1.0" },
+          { "hold_third_person": "context.is_first_person == 0.0" }
+        ]
+      },
+      "render_controllers": ["controller.render.paragonia_classes.ability"]
+    }
+  }
+}

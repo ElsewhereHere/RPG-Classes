@@ -2,16 +2,7 @@
 	"format_version": "1.10.0",
 	"animations": {
 		"animation.attachable_display.hold_first_person": {
-			"loop": true,
-			"bones": {
-				"rightItem": {
-					"rotation": [45, 45, 0],
-					"position": [1.5, -1, -1]
-				},
-				"item_l": {
-					"scale": 0
-				}
-			}
+			"loop": true
 		},
 		"animation.attachable_display.hold_third_person": {
 			"loop": true,
@@ -44,6 +35,26 @@
 				},
 				"item_r": {
 					"scale": 0
+				}
+			}
+		},
+		"animation.attachable_display.ability_hold_first_person": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [45, 45, 0],
+					"position": [1.5, -1, -1]
+				},
+				"glow": {
+					"position": [0, 0, 2]
+				}
+			}
+		},
+		"animation.attachable_display.ability_hold_third_person": {
+			"loop": true,
+			"bones": {
+				"glow": {
+					"position": [-1, 2, -1]
 				}
 			}
 		},

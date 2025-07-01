@@ -298,10 +298,16 @@ mc.world.afterEvents.entityHurt.subscribe((event) => {
   const hasAccess = handler.tags.some((tag) => attacker.hasTag(tag));
   if (!hasAccess) return;
 
-  const current = playerUltimate.get(attacker.id) || {};
-  const newCharge = Math.min((current[class_id] || 0) + amount, 100);
+  const current    = playerUltimate.get(attacker.id) || {};
+  const prevCharge = current[class_id] || 0;
+  const newCharge  = Math.min(prevCharge + amount, 100);
   current[class_id] = newCharge;
   playerUltimate.set(attacker.id, current);
+
+  // If we've just topped out at 100 (and weren’t already there), play the “ready” sound
+  if (newCharge === 100 && prevCharge < 100) {
+    attacker.playSound("paragonia_classes.ability_ultimate_ready",attacker.location);
+  }
 
   //attacker.sendMessage(
   //  `§7[RPG Classes] ${handler.class_name} Ultimate: ${newCharge}/100`
@@ -371,7 +377,6 @@ mc.system.runInterval(() => {
     }
   }
 }, 1);
-
 
 // Display Ultimate progress in Action Bar
 mc.system.runInterval(() => {
@@ -692,3 +697,82 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
     }
 });
 */
+
+
+
+//    CLASS TAG ITEM COOLDOWNS
+//--------------------------------
+
+// Class Item Definitions
+const CLASS_ITEMS = {
+  barbarian: [
+    "paragonia_classes:ability_barbarian_1",
+    "paragonia_classes:ability_barbarian_2",
+    "paragonia_classes:ability_barbarian_3",
+    "paragonia_classes:ability_barbarian_ult",
+    "paragonia_classes:utility_barbarian_1",
+    "paragonia_classes:utility_barbarian_2",
+  ],
+  paladin: [
+    "paragonia_classes:ability_paladin_1",
+    "paragonia_classes:ability_paladin_2",
+    "paragonia_classes:ability_paladin_3",
+    "paragonia_classes:ability_paladin_ult",
+    "paragonia_classes:utility_paladin_1",
+    "paragonia_classes:utility_paladin_2",
+  ],
+  druid: [
+    "paragonia_classes:ability_druid_1",
+    "paragonia_classes:ability_druid_2",
+    "paragonia_classes:ability_druid_3",
+    "paragonia_classes:ability_druid_ult",
+    "paragonia_classes:utility_druid_1",
+    "paragonia_classes:utility_druid_2",
+  ],
+  // add more classes here…
+};
+
+/** Build reverse lookup: itemId → its className */
+const ITEM_TO_CLASS = new Map();
+for (const [cls, items] of Object.entries(CLASS_ITEMS)) {
+  for (const id of items) {
+    ITEM_TO_CLASS.set(id, cls);
+  }
+}
+
+//Returns true if this player should be barred from using this item,
+//i.e. the item belongs to a class for which they lack both tags.
+function shouldForceCooldown(itemId, player) {
+  const cls = ITEM_TO_CLASS.get(itemId);
+  if (!cls) return false;  // not in our tracked classes
+  const hasClass    = player.hasTag(`paragonia_classes:class_${cls}`);
+  const hasSubclass = player.hasTag(`paragonia_classes:subclass_${cls}`);
+  return !(hasClass || hasSubclass);
+}
+
+//Apply cooldown to this item stack for that player.
+function forceCooldownOnStack(stack, player) {
+  if (!stack) return;
+  if (shouldForceCooldown(stack.typeId, player)) {
+    const cd = stack.getComponent("minecraft:cooldown");
+    cd?.startCooldown(player);
+  }
+}
+
+// Every tick, enforce cooldowns on any disallowed class items:
+mc.system.runInterval(() => {
+  for (const player of mc.world.getPlayers()) {
+    const invComp = player.getComponent("minecraft:inventory");
+    if (!invComp) continue;
+
+    const container = invComp.container;
+    const HOTBAR_SIZE = 9;                     // Only scan slots 0–8
+    for (let i = 0; i < HOTBAR_SIZE; i++) {
+      const stack = container.getItem(i);
+      forceCooldownOnStack(stack, player);
+    }
+  }
+}, 1);
+
+
+

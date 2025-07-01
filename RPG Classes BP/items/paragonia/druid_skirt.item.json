@@ -16,21 +16,6 @@
       "minecraft:wearable": {
         "slot": "slot.armor.legs",
         "protection": 1
-      },
-      "minecraft:durability": {
-        "damage_chance": {
-          "min": 50,
-          "max": 100
-        },
-        "max_durability": 256
-      },
-      "minecraft:repairable": {
-        "repair_items": [
-          {
-            "items": ["minecraft:oak_leaves"],
-            "repair_amount": 64
-          }
-        ]
       }
     }
   }

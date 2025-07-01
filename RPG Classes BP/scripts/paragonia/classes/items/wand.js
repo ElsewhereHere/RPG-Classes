@@ -108,7 +108,7 @@ mc.system.runInterval(() => {
     }
 
     // Trail VFX
-    shot.dimension.spawnParticle("paragonia_classes:druid_particle", nextPos);
+    shot.dimension.spawnParticle("paragonia_classes:wand", nextPos);
 
     // Entity collision
     // Entity collision via raycast
@@ -126,20 +126,25 @@ const hits = shot.dimension.getEntitiesFromRay(
 if (hits.length > 0) {
   const target = hits[0].entity;
   shot.dimension.spawnParticle("paragonia_classes:wand_impact", target.location);
-  shot.dimension.playSound("paragonia_classes:wand_hit",       target.location);
+  shot.dimension.playSound("paragonia_classes:wand_hit", target.location);
+
   const caster = mc.world.getPlayers().find(p => p.id === shot.playerId);
+  const damageAmount = caster && caster.hasTag("paragonia_classes:has_barkskin")
+    ? 5
+    : 3;
+
   if (caster) {
-    target.applyDamage(4, {
+    target.applyDamage(damageAmount, {
       cause:            mc.EntityDamageCause.magic,
       damagingEntity:   caster
     });
   } else {
-    target.applyDamage(4);
+    target.applyDamage(damageAmount);
   }
+
   activeWandShots.delete(id);
   continue;
 }
-
 
     // Advance or expire by range
     shot.pos = nextPos;

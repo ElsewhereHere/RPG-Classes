@@ -4,7 +4,7 @@
     "description": {
       "identifier": "paragonia_classes:soothing_spores",
       "materials": {
-        "default": "entity_alphatest",
+        "default": "paragonia_classes_emissive_blend",
         "outline": "paragonia_classes_emissive_blend_additive"
       },
       "textures": {

@@ -26,33 +26,51 @@ function isWearingFullDruidSet(player) {
   );
 }
 
+function isWearingFullBarkskinSet(player) {
+  const equip = player.getComponent("minecraft:equippable");
+  if (!equip) return false;
+
+  return (
+    equip.getEquipment(mc.EquipmentSlot.Head)?.typeId === BARKSKIN_ARMOR.head &&
+    equip.getEquipment(mc.EquipmentSlot.Chest)?.typeId === BARKSKIN_ARMOR.chest &&
+    equip.getEquipment(mc.EquipmentSlot.Legs)?.typeId === BARKSKIN_ARMOR.legs &&
+    equip.getEquipment(mc.EquipmentSlot.Feet)?.typeId === BARKSKIN_ARMOR.feet
+  );
+}
+
 export function Barkskin(player) {
-  if (!isWearingFullDruidSet(player)) return;
+  player.addTag("paragonia_classes:has_barkskin");
+  player.dimension.playSound("paragonia_classes.druid_ability_2_leaves", player.location);
 
-  const replacements = {
-    head: BARKSKIN_ARMOR.head,
-    chest: BARKSKIN_ARMOR.chest,
-    legs: BARKSKIN_ARMOR.legs,
-    feet: BARKSKIN_ARMOR.feet,
-  };
+  // only swap in barkskin armor & play effects if they were wearing the full set
+  if (isWearingFullDruidSet(player)) {
+    const replacements = {
+      head:  BARKSKIN_ARMOR.head,
+      chest: BARKSKIN_ARMOR.chest,
+      legs:  BARKSKIN_ARMOR.legs,
+      feet:  BARKSKIN_ARMOR.feet,
+    };
 
-  for (const [slot, itemId] of Object.entries(replacements)) {
-    player.runCommandAsync(
-      `replaceitem entity @s slot.armor.${slot} 0 ${itemId} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`
-    );
+    for (const [slot, itemId] of Object.entries(replacements)) {
+      player.runCommandAsync(
+        `replaceitem entity @s slot.armor.${slot} 0 ${itemId} 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}`
+      );
+    }
+    player.playAnimation("animation.paragonia_classes.player.barkskin");
+    player.dimension.playSound("paragonia_classes.druid_ability_2", player.location);
+    // player.dimension.spawnParticle("paragonia_classes:druid_barkskin", player.location );
   }
 
-  player.playAnimation("animation.paragonia_classes.player.barkskin");
-  player.dimension.playSound("paragonia_classes.druid_ability_2_leaves", player.location);
-  player.dimension.playSound("paragonia_classes.druid_ability_2", player.location);
-  //player.dimension.spawnParticle("paragonia_classes:druid_barkskin", player.location );
-
   mc.system.runTimeout(() => {
-    for (const [slot, itemId] of Object.entries(DRUID_ARMOR)) {
-      player.runCommandAsync(`replaceitem entity @s slot.armor.${slot} 0 ${itemId} 1`);
+    if (isWearingFullBarkskinSet(player)) {
+      for (const [slot, itemId] of Object.entries(DRUID_ARMOR)) {
+        player.runCommandAsync(`replaceitem entity @s slot.armor.${slot} 0 ${itemId} 1`);
+      }
     }
+    player.removeTag("paragonia_classes:has_barkskin");
   }, 100);
 }
+
 
 
 mc.world.afterEvents.playerSpawn.subscribe(({ player, isFirstSpawn }) => {

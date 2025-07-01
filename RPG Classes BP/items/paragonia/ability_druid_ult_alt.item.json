@@ -14,8 +14,7 @@
       "minecraft:tags": {
         "tags": [
           "paragonia_classes:ability",
-          "paragonia_classes:druid",
-          "paragonia_classes:arm_visible"
+          "paragonia_classes:druid"
         ]
       },
       "minecraft:can_destroy_in_creative": false,

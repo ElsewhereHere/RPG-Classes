@@ -20,7 +20,8 @@ const DRUID_FLOWER_BLOCKS = [
   "minecraft:pitcher_plant",
   "minecraft:cactus_flower",
   "minecraft:wildflowers",
-  "minecraft:torchflower"
+  "minecraft:torchflower",
+  "minecraft:spore_blossom"
 ];
 
 mc.world.afterEvents.worldInitialize.subscribe(() => {

@@ -8,13 +8,10 @@
       "sounds": [
         { "name": "sounds/paragonia/classes/wand_cast_1", "volume": 0.85, "pitch": 1 },
         { "name": "sounds/paragonia/classes/wand_cast_2", "volume": 0.85, "pitch": 1 },
-        { "name": "sounds/paragonia/classes/wand_cast_3", "volume": 0.85, "pitch": 1 },
         { "name": "sounds/paragonia/classes/wand_cast_1", "volume": 0.85, "pitch": 1.1 },
         { "name": "sounds/paragonia/classes/wand_cast_2", "volume": 0.85, "pitch": 1.1 },
-        { "name": "sounds/paragonia/classes/wand_cast_3", "volume": 0.85, "pitch": 1.1 },
         { "name": "sounds/paragonia/classes/wand_cast_1", "volume": 0.85, "pitch": 0.9 },
-        { "name": "sounds/paragonia/classes/wand_cast_2", "volume": 0.85, "pitch": 0.9 },
-        { "name": "sounds/paragonia/classes/wand_cast_3", "volume": 0.85, "pitch": 0.9 }
+        { "name": "sounds/paragonia/classes/wand_cast_2", "volume": 0.85, "pitch": 0.9 }
       ]
     },
 
@@ -45,6 +42,14 @@
         { "name": "sounds/paragonia/classes/ability_on_cooldown", "volume": 0.65, "pitch": 1 },
         { "name": "sounds/paragonia/classes/ability_on_cooldown", "volume": 0.65, "pitch": 0.9 },
         { "name": "sounds/paragonia/classes/ability_on_cooldown", "volume": 0.65, "pitch": 0.8 }
+      ]
+    },
+    "paragonia_classes.ability_ultimate_ready": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 2,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/ability_ultimate_ready", "volume": 0.65, "pitch": 1 }
       ]
     },
 
@@ -303,9 +308,9 @@
       "min_distance": 0,
       "max_distance": 15,
       "sounds": [
-        { "name": "sounds/paragonia/classes/druid_ability_1_cast", "volume": 0.75, "pitch": 1 },
-        { "name": "sounds/paragonia/classes/druid_ability_1_cast", "volume": 0.75, "pitch": 1.1 },
-        { "name": "sounds/paragonia/classes/druid_ability_1_cast", "volume": 0.75, "pitch": 0.9 }
+        { "name": "sounds/paragonia/classes/druid_ability_1_cast", "volume": 0.35, "pitch": 1 },
+        { "name": "sounds/paragonia/classes/druid_ability_1_cast", "volume": 0.35, "pitch": 1.1 },
+        { "name": "sounds/paragonia/classes/druid_ability_1_cast", "volume": 0.35, "pitch": 0.9 }
       ]
     },
     "paragonia_classes.druid_ability_1_grow": {
@@ -340,6 +345,36 @@
         { "name": "sounds/paragonia/classes/druid_ability_2_leaves", "volume": 0.65, "pitch": 1 }
       ]
     },
+    "paragonia_classes.druid_ability_2_idle1": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 5,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/druid_ability_2_idle1", "volume": 0.05, "pitch": 1 },
+        { "name": "sounds/paragonia/classes/druid_ability_2_idle1", "volume": 0.05, "pitch": 1.1 },
+        { "name": "sounds/paragonia/classes/druid_ability_2_idle1", "volume": 0.05, "pitch": 0.9 }
+      ]
+    },
+    "paragonia_classes.druid_ability_2_idle2": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 5,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/druid_ability_2_idle2", "volume": 0.05, "pitch": 1 },
+        { "name": "sounds/paragonia/classes/druid_ability_2_idle2", "volume": 0.05, "pitch": 1.1 },
+        { "name": "sounds/paragonia/classes/druid_ability_2_idle2", "volume": 0.05, "pitch": 0.9 }
+      ]
+    },
+    "paragonia_classes.druid_ability_2_idle3": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 5,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/druid_ability_2_idle3", "volume": 0.1, "pitch": 1 },
+        { "name": "sounds/paragonia/classes/druid_ability_2_idle3", "volume": 0.1, "pitch": 1.1 },
+        { "name": "sounds/paragonia/classes/druid_ability_2_idle3", "volume": 0.1, "pitch": 0.9 }
+      ]
+    },
     "paragonia_classes.druid_ability_3": {
       "category": "player",
       "min_distance": 0,
@@ -363,6 +398,58 @@
     "paragonia_classes.druid_ability_3_mushroom7": {"category": "player","min_distance": 0,"max_distance": 10,"sounds": [{ "name": "sounds/paragonia/classes/druid_ability_3_mushroom", "volume": 0.25, "pitch": 1.15 }]
     },
     "paragonia_classes.druid_ability_3_mushroom8": {"category": "player","min_distance": 0,"max_distance": 10,"sounds": [{ "name": "sounds/paragonia/classes/druid_ability_3_mushroom", "volume": 0.25, "pitch": 1.2 }]
+    },
+    "paragonia_classes.druid_ability_3_idle": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 5,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/druid_ability_3_mushroom", "volume": 0.01, "pitch": 1 },
+        { "name": "sounds/paragonia/classes/druid_ability_3_mushroom", "volume": 0.01, "pitch": 0.9 },
+        { "name": "sounds/paragonia/classes/druid_ability_3_mushroom", "volume": 0.01, "pitch": 0.8 },
+        { "name": "sounds/paragonia/classes/druid_ability_3_mushroom", "volume": 0.01, "pitch": 0.7 },
+        { "name": "sounds/paragonia/classes/druid_ability_3_mushroom", "volume": 0.01, "pitch": 1.2 },
+        { "name": "sounds/paragonia/classes/druid_ability_3_mushroom", "volume": 0.01, "pitch": 1.1 }
+      ]
+    },
+    "paragonia_classes.druid_ability_3_idle2": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 5,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/druid_ability_3_idle", "volume": 0.15, "pitch": 1.1 },
+        { "name": "sounds/paragonia/classes/druid_ability_3_idle", "volume": 0.15, "pitch": 0.9 },
+        { "name": "sounds/paragonia/classes/druid_ability_3_idle", "volume": 0.15, "pitch": 0.8 }
+      ]
+    },
+    "paragonia_classes.druid_ability_ult": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 15,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/druid_ability_ult", "volume": 1, "pitch": 1 }
+      ]
+    },
+    "paragonia_classes.druid_ability_ult_alt": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 10,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/druid_ability_ult_alt", "volume": 1.5, "pitch": 1 },
+        { "name": "sounds/paragonia/classes/druid_ability_ult_alt", "volume": 1.5, "pitch": 0.9 },
+        { "name": "sounds/paragonia/classes/druid_ability_ult_alt", "volume": 1.5, "pitch": 1.1 }
+      ]
+    },
+    "paragonia_classes.druid_ability_ult_alt_growl": {
+      "category": "player",
+      "min_distance": 0,
+      "max_distance": 10,
+      "sounds": [
+        { "name": "sounds/paragonia/classes/druid_ability_ult_alt_growl1", "volume": 0.65, "pitch": 1 },
+        { "name": "sounds/paragonia/classes/druid_ability_ult_alt_growl1", "volume": 0.65, "pitch": 0.9 },
+        { "name": "sounds/paragonia/classes/druid_ability_ult_alt_growl2", "volume": 0.65, "pitch": 1 },
+        { "name": "sounds/paragonia/classes/druid_ability_ult_alt_growl2", "volume": 0.65, "pitch": 0.9 }
+      ]
     }
   }
 }

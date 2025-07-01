@@ -75,7 +75,12 @@
     "paragonia_classes_barkskin_legs": {"textures": "textures/paragonia/classes/items/barkskin_legs"},
     "paragonia_classes_barkskin_feet": {"textures": "textures/paragonia/classes/items/barkskin_feet"},
 
-     "paragonia_classes_healing_salve": {"textures": "textures/paragonia/classes/items/healing_salve"},
+    "paragonia_classes_wildshape_head": {"textures": "textures/paragonia/classes/items/wildshape_head"},
+    "paragonia_classes_wildshape_torso": {"textures": "textures/paragonia/classes/items/wildshape_torso"},
+    "paragonia_classes_wildshape_legs": {"textures": "textures/paragonia/classes/items/wildshape_legs"},
+    "paragonia_classes_wildshape_feet": {"textures": "textures/paragonia/classes/items/wildshape_feet"},
+
+    "paragonia_classes_healing_salve": {"textures": "textures/paragonia/classes/items/healing_salve"},
     "paragonia_classes_healing_salve_red": {"textures": "textures/paragonia/classes/items/healing_salve_red"},
     "paragonia_classes_healing_salve_brown": {"textures": "textures/paragonia/classes/items/healing_salve_brown"},
     "paragonia_classes_healing_salve_crimson": {"textures": "textures/paragonia/classes/items/healing_salve_crimson"},

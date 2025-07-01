@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.paragonia_classes.wild_shape": {
+			"initial_state": "spawn",
+			"states": {
+				"spawn": {
+					"animations": ["spawn", "idle"],
+					"transitions": [
+						{"idle": "query.all_animations_finished"}
+					]
+				},
+				"idle": {
+					"animations": ["idle"],
+					"transitions": [
+						{"walk": "query.ground_speed > 1"}
+					],
+					"blend_transition": 0.2
+				},
+				"walk": {
+					"animations": ["walk", "idle"],
+					"transitions": [
+						{"run": "query.ground_speed > 8"},
+						{"idle": "query.ground_speed <= 1"}
+					],
+					"blend_transition": 0.2
+				},
+				"run": {
+					"animations": ["run", "idle"],
+					"transitions": [
+						{"walk": "query.ground_speed < 6"},
+						{"idle": "query.ground_speed <= 1"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

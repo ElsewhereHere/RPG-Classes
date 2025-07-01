@@ -279,6 +279,23 @@
         }
       }
     },
+    "controller.animation.paragonia_classes.druid_ability_ult_alt": {
+      "initial_state": "cooldown",
+      "states": {
+		    "cooldown": {
+          "animations": ["cooldown"],
+          "transitions": [{"idle": "query.is_selected_item && query.is_cooldown_type('paragonia_classes:ability_druid_ult_alt', 'slot.weapon.mainhand') && query.cooldown_time_remaining('slot.weapon.mainhand') == 0"}],"blend_transition": 0.2
+        },
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [{"cast": "query.is_cooldown_type('paragonia_classes:ability_druid_ult_alt', 'slot.weapon.mainhand') && query.cooldown_time_remaining('slot.weapon.mainhand') > 0"}],"blend_transition": 0
+        },
+		    "cast": {
+          "animations": ["cast"],
+          "transitions": [{"cooldown": "query.any_animation_finished"}],"blend_transition": 0
+        }
+      }
+    },
     "controller.animation.paragonia_classes.druid_utility_1": {
       "initial_state": "cooldown",
       "states": {

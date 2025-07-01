@@ -2346,25 +2346,218 @@
 			}
 		},
 		"animation.paragonia_classes.player.wild_shape": {
-			"loop": true,
-			"animation_length": 10,
+			"animation_length": 10.5,
 			"bones": {
 				"waist": {
 					"rotation": {
 						"0.0": [0, 0, 0],
-						"0.25": [90, 0, 0]
+						"0.0833": {
+							"pre": [32.5, 0, 22.5],
+							"post": [32.5, 0, 22.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [32.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [45, 0, -22.5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6667": {
+							"post": [32.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [32.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.1667": {
+							"post": [-22.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.25": [-22.5, 0, 0],
+						"1.3333": {"pre": [-22.5, 0, 0], "post": [0, 0, 0]},
+						"10.0": {"pre": [0, 0, 0], "post": [90, 0, 0]},
+						"10.5": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"1.3333": {"pre": [1, 1, 1], "post": ["variable.is_first_person == true ? 1 : 0", "variable.is_first_person == true ? 1 : 0", "variable.is_first_person == true ? 1 : 0"]},
+						"10.0": {"pre": ["variable.is_first_person == true ? 1 : 0", "variable.is_first_person == true ? 1 : 0", "variable.is_first_person == true ? 1 : 0"], "post": [1, 1, 1]}
 					}
 				},
 				"leftArm": {
 					"rotation": {
-						"0.0": [0, 0, 0],
-						"0.25": [-90, 0, 0]
+						"0.4167": [0, 0, 0],
+						"0.5": {
+							"pre": [-72.5, 50, 0],
+							"post": [-72.5, 50, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5833": {
+							"post": [-72.5, 50, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6667": {
+							"post": [-72.5, -55, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.8333": {
+							"post": [-72.5, -55, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [-72.5, -55, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.1667": [-90, -75, 0],
+						"10.0": {"pre": [-90, -75, 0], "post": [-110, 0, 0]},
+						"10.5": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"1.3333": {"pre": [1, 1, 1], "post": [0, 0, 0]},
+						"10.0": {"pre": [0, 0, 0], "post": [1, 1, 1]}
 					}
 				},
 				"rightArm": {
 					"rotation": {
 						"0.0": [0, 0, 0],
-						"0.25": [-90, 0, 0]
+						"0.0833": {
+							"pre": [-72.5, -50, 0],
+							"post": [-72.5, -50, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": [-72.5, -50, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [-72.5, 55, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": {
+							"post": [-72.5, 55, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [-72.5, 55, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.1667": [-90, 75, 0],
+						"1.3333": {"pre": [-90, 75, 0], "post": [0, 0, 0]},
+						"10.0": {"pre": [0, 0, 0], "post": [-110, 0, 0]},
+						"10.5": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"1.3333": {"pre": [1, 1, 1], "post": ["variable.is_first_person == true ? 1 : 0", "variable.is_first_person == true ? 1 : 0", "variable.is_first_person == true ? 1 : 0"]},
+						"10.0": {"pre": ["variable.is_first_person == true ? 1 : 0", "variable.is_first_person == true ? 1 : 0", "variable.is_first_person == true ? 1 : 0"], "post": [1, 1, 1]}
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0833": {
+							"pre": [0, -22.5, 0],
+							"post": [0, -22.5, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [-12.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [0, 22.5, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6667": {
+							"post": [-17.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [-17.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.1667": [-62.5, 0, 0],
+						"10.0": {"pre": [-62.5, 0, 0], "post": [-45, 0, 0]},
+						"10.5": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"1.3333": {"pre": [1, 1, 1], "post": [0, 0, 0]},
+						"10.0": {"pre": [0, 0, 0], "post": [1, 1, 1]}
+					}
+				},
+				"leftLeg": {
+					"rotation": {
+						"0.25": [0, 0, 0],
+						"0.4167": {
+							"pre": [20, 0, -15],
+							"post": [20, 0, -15],
+							"lerp_mode": "catmullrom"
+						},
+						"0.6667": {
+							"post": [-10, -45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": [-10, -45, 0],
+						"10.0": {"pre": [-10, -45, 0], "post": [0, 0, 0]},
+						"10.5": [0, 0, 0]
+					},
+					"position": {
+						"0.25": [0, 0, 0],
+						"0.4167": [0, 0, 0],
+						"0.5": [0, 2, 0],
+						"0.6667": [1, 0, 0],
+						"1.0": [1, 0, 0],
+						"10.0": {"pre": [1, 0, 0], "post": [1, 0, 0]},
+						"10.5": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"1.3333": {"pre": [1, 1, 1], "post": [0, 0, 0]},
+						"10.0": {"pre": [0, 0, 0], "post": [1, 1, 1]}
+					}
+				},
+				"rightLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": {
+							"pre": [-10, 45, 0],
+							"post": [-10, 45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": {
+							"post": [-10, 45, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": [-10, 45, 0],
+						"10.0": {"pre": [-10, 45, 0], "post": [0, 0, 0]},
+						"10.5": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.0833": [0, 2, 0],
+						"0.25": [-1, 0, 0],
+						"0.4167": [-1, 0, 0],
+						"1.0": [-1, 0, 0],
+						"10.0": {"pre": [-1, 0, 0], "post": [-1, 0, 0]},
+						"10.5": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"1.3333": {"pre": [1, 1, 1], "post": [0, 0, 0]},
+						"10.0": {"pre": [0, 0, 0], "post": [1, 1, 1]}
 					}
 				}
 			}

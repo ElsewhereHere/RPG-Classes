@@ -1,0 +1,313 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.paragonia_classes.ability_druid_3",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "cape",
+					"parent": "body",
+					"pivot": [0, 24, 3]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "leftSleeve",
+					"parent": "leftArm",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "leftItem",
+					"parent": "leftArm",
+					"pivot": [6, 15, 1]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [-5, 22, 0],
+					"cubes": [
+						{
+							"origin": [-8, 12, -2],
+							"size": [4, 12, 4],
+							"uv": {}
+						}
+					]
+				},
+				{
+					"name": "rightSleeve",
+					"parent": "rightArm",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [-6, 15, 1],
+					"locators": {
+						"vfx": [-6, 14, -2],
+						"lead_hold": [-6, 15, 1]
+					}
+				},
+				{
+					"name": "ability",
+					"parent": "rightItem",
+					"pivot": [-6, 14, -2],
+					"rotation": [90, 0, 0]
+				},
+				{
+					"name": "mushroom1",
+					"parent": "ability",
+					"pivot": [-6, 12, -2],
+					"cubes": [
+						{
+							"origin": [-8, 15, -4],
+							"size": [4, 3, 4],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [4, 3]},
+								"east": {"uv": [0, 10], "uv_size": [4, 3]},
+								"south": {"uv": [0, 10], "uv_size": [4, 3]},
+								"west": {"uv": [0, 10], "uv_size": [4, 3]},
+								"up": {"uv": [4, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [-7, 12, -3],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [1, 13], "uv_size": [2, 3]},
+								"east": {"uv": [1, 13], "uv_size": [2, 3]},
+								"south": {"uv": [1, 13], "uv_size": [2, 3]},
+								"west": {"uv": [1, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_1",
+					"parent": "mushroom1",
+					"pivot": [-6, 15, -2],
+					"cubes": [
+						{
+							"origin": [-8, 15, -4],
+							"size": [4, 3, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [4, 3]},
+								"east": {"uv": [12, 10], "uv_size": [4, 3]},
+								"south": {"uv": [12, 10], "uv_size": [4, 3]},
+								"west": {"uv": [12, 10], "uv_size": [4, 3]},
+								"up": {"uv": [16, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [16, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [-7, 12, -3],
+							"size": [2, 3, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [2, 3]},
+								"east": {"uv": [13, 13], "uv_size": [2, 3]},
+								"south": {"uv": [13, 13], "uv_size": [2, 3]},
+								"west": {"uv": [13, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "mushroom2",
+					"parent": "ability",
+					"pivot": [-7, 12, -3],
+					"cubes": [
+						{
+							"origin": [-9, 15, -5],
+							"size": [4, 3, 4],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [4, 3]},
+								"east": {"uv": [0, 10], "uv_size": [4, 3]},
+								"south": {"uv": [0, 10], "uv_size": [4, 3]},
+								"west": {"uv": [0, 10], "uv_size": [4, 3]},
+								"up": {"uv": [4, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [-8, 12, -4],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [1, 13], "uv_size": [2, 3]},
+								"east": {"uv": [1, 13], "uv_size": [2, 3]},
+								"south": {"uv": [1, 13], "uv_size": [2, 3]},
+								"west": {"uv": [1, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_2",
+					"parent": "mushroom2",
+					"pivot": [-1, 0, -1],
+					"cubes": [
+						{
+							"origin": [-9, 15, -5],
+							"size": [4, 3, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [4, 3]},
+								"east": {"uv": [12, 10], "uv_size": [4, 3]},
+								"south": {"uv": [12, 10], "uv_size": [4, 3]},
+								"west": {"uv": [12, 10], "uv_size": [4, 3]},
+								"up": {"uv": [16, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [16, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [-8, 12, -4],
+							"size": [2, 3, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [2, 3]},
+								"east": {"uv": [13, 13], "uv_size": [2, 3]},
+								"south": {"uv": [13, 13], "uv_size": [2, 3]},
+								"west": {"uv": [13, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "mushroom3",
+					"parent": "ability",
+					"pivot": [-7.5, 12, -1.5],
+					"cubes": [
+						{
+							"origin": [-9.5, 15, -3.5],
+							"size": [4, 3, 4],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [4, 3]},
+								"east": {"uv": [0, 10], "uv_size": [4, 3]},
+								"south": {"uv": [0, 10], "uv_size": [4, 3]},
+								"west": {"uv": [0, 10], "uv_size": [4, 3]},
+								"up": {"uv": [4, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [-8.5, 12, -2.5],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [1, 13], "uv_size": [2, 3]},
+								"east": {"uv": [1, 13], "uv_size": [2, 3]},
+								"south": {"uv": [1, 13], "uv_size": [2, 3]},
+								"west": {"uv": [1, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_3",
+					"parent": "mushroom3",
+					"pivot": [-7.5, 15, -1.5],
+					"cubes": [
+						{
+							"origin": [-9.5, 15, -3.5],
+							"size": [4, 3, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [4, 3]},
+								"east": {"uv": [12, 10], "uv_size": [4, 3]},
+								"south": {"uv": [12, 10], "uv_size": [4, 3]},
+								"west": {"uv": [12, 10], "uv_size": [4, 3]},
+								"up": {"uv": [16, 10], "uv_size": [-4, -4]},
+								"down": {"uv": [16, 10], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [-8.5, 12, -2.5],
+							"size": [2, 3, 2],
+							"inflate": 0.25,
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [2, 3]},
+								"east": {"uv": [13, 13], "uv_size": [2, 3]},
+								"south": {"uv": [13, 13], "uv_size": [2, 3]},
+								"west": {"uv": [13, 13], "uv_size": [2, 3]}
+							}
+						}
+					]
+				},
+				{
+					"name": "outline_glow",
+					"parent": "ability",
+					"pivot": [-6, 14, -2],
+					"cubes": [
+						{
+							"origin": [-13, 7, -2],
+							"size": [14, 14, 0],
+							"uv": {
+								"north": {"uv": [18, 18], "uv_size": [14, 14]},
+								"south": {"uv": [18, 18], "uv_size": [14, 14]}
+							}
+						}
+					]
+				},
+				{
+					"name": "jacket",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "root",
+					"pivot": [1.9, 12, 0]
+				},
+				{
+					"name": "leftPants",
+					"parent": "leftLeg",
+					"pivot": [1.9, 12, 0]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "root",
+					"pivot": [-1.9, 12, 0]
+				},
+				{
+					"name": "rightPants",
+					"parent": "rightLeg",
+					"pivot": [-1.9, 12, 0]
+				}
+			]
+		}
+	]
+}

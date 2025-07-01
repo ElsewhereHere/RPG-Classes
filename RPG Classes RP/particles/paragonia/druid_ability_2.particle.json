@@ -2,10 +2,18 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "paragonia_classes:druid_particle",
+			"identifier": "paragonia_classes:druid_ability_2",
 			"basic_render_parameters": {
 				"material": "particles_add",
-				"texture": "textures/paragonia/classes/particles/druid_particles"
+				"texture": "textures/paragonia/classes/particles/druid_barkskin"
+			}
+		},
+		"events": {
+			"glow": {
+				"particle_effect": {
+					"effect": "paragonia_classes:druid_glow",
+					"type": "emitter"
+				}
 			}
 		},
 		"components": {
@@ -24,6 +32,9 @@
 			"minecraft:particle_lifetime_expression": {
 				"max_lifetime": 0.35
 			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.random(0,180)"
+			},
 			"minecraft:particle_initial_speed": 1,
 			"minecraft:particle_motion_dynamic": {
 				"linear_acceleration": [0, "math.random(0.5,3)", 0]
@@ -32,16 +43,10 @@
 				"size": [0.15, 0.15],
 				"facing_camera_mode": "rotate_xyz",
 				"uv": {
-					"texture_width": 8,
-					"texture_height": 24,
-					"flipbook": {
-						"base_UV": [0, 0],
-						"size_UV": [8, 8],
-						"step_UV": [0, 8],
-						"frames_per_second": 2,
-						"max_frame": 3,
-						"stretch_to_lifetime": true
-					}
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [0, 0],
+					"uv_size": [16, 16]
 				}
 			},
 			"minecraft:particle_appearance_tinting": {

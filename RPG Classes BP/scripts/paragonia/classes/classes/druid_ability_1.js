@@ -84,7 +84,7 @@ mc.system.runInterval(() => {
         }
 
         target.addEffect("slowness", 40, {
-          amplifier: 10,
+          amplifier: 6,
           showParticles: false,
         });
 
